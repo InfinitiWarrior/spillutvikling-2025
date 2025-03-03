@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://bbt1w84r7h2ly"]
+
+[ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="1_1abrx"]
+
+[resource]
+script = ExtResource("1_1abrx")
+name = "Test Enemy"
+maximumHealth = 100
+power = 100
+defense = 100
+abilityName = "TEST"
