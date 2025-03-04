@@ -15,6 +15,10 @@ run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[autoload]
+
+SaveManager="*res://scripts/SaveManager.gd"
+
 [dotnet]
 
 project/assembly_name="Mildly Infuriating Aquatic Creatures Return of the Axolotl"
@@ -23,7 +27,7 @@ project/assembly_name="Mildly Infuriating Aquatic Creatures Return of the Axolot
 
 folder_colors={
 "res://resources/stats/": "purple",
-"res://scenes/": "gray",
+"res://scenes/": "yellow",
 "res://scripts/": "green",
 "res://scripts/customResources/": "teal",
 "res://sprites/": "pink"

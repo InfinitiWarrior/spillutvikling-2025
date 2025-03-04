@@ -4,7 +4,8 @@ extends CharacterBody2D
 @export var enemyStats : EnemyStats
 
 func _ready():
-	printStats()
+	#printStats()
+	pass
 
 func printStats():
 	if enemyStats:

@@ -1,4 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	var unlocked = load("res://player/UnlockedAquatics.tres")
+	var allAquatics = load("res://player/AllAquatics.tres").allAquatics
+	var unlockedAquatics = load("res://player/UnlockedAquatics.tres")
+	
+	SaveManager.save()

@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="UnlockedAquatics" load_steps=4 format=3 uid="uid://cnvmjv8l8uc7o"]
+[gd_resource type="Resource" script_class="UnlockedAquatics" load_steps=3 format=3 uid="uid://cnvmjv8l8uc7o"]
 
 [ext_resource type="Script" path="res://scripts/customResources/UnlockedAquatics.gd" id="1_4qosd"]
 [ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="2_pxhnh"]
-[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="3_30v1d"]
 
 [resource]
 script = ExtResource("1_4qosd")
-unlockedAquatics = Array[ExtResource("2_pxhnh")]([ExtResource("3_30v1d"), ExtResource("3_30v1d")])
+unlockedAquatics = Array[ExtResource("2_pxhnh")]([])
