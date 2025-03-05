@@ -1,24 +1,28 @@
 extends Node
 
 var savePath = "user://saves/test_save.tres" # Have to make sure the saves folder exists
-
-var gameData : GameData
-
-func _ready():
-	if gameData == null:
-		gameData = GameData.new()
-		print("Initialized new game data")
-		
-	gameData.unlockedAquatics = UnlockedAquatics.new()
+#var aquatic = load("res://base/AquaticArray.tres")
 
 func save():
-	print(gameData)
-	if gameData:
-		print("Saving to: ", savePath)
-		ResourceSaver.save(gameData, savePath)
-
-func load(savePath): 
-	var loadedData = ResourceLoader.load(savePath)
+	var unlockedAquatic = load("res://player/UnlockedAquaticArray.tres").duplicate() 
 	
-	if loadedData:
-		gameData = loadedData
+	var gameData = GameData.new()
+	gameData.unlockedAquaticArray = unlockedAquatic
+	
+	print(gameData.unlockedAquaticArray.array)
+
+	ResourceSaver.save(gameData, "user://saves/save.tres")
+
+func loadSave(): 
+	var gameData = ResourceLoader.load("user://saves/save.tres")
+	
+	var unlockedAquatic = load("res://player/UnlockedAquaticArray.tres")
+	unlockedAquatic = gameData.unlockedAquaticArray # Overwriting the resource in memory with the save data
+	
+	
+	
+
+#func initializeNew(): # Deletes save specific data and adds starting stuff like the Aquatic you start off with
+	#var unlockedAquatic = load("res://player/UnlockedAquaticArray.tres")
+	#if len(unlockedAquatic.array) != 0:
+		#unlockedAquatic.array.clear()

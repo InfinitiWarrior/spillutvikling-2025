@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="UnlockedAquatics" load_steps=3 format=3 uid="uid://cnvmjv8l8uc7o"]
-
-[ext_resource type="Script" path="res://scripts/customResources/UnlockedAquatics.gd" id="1_4qosd"]
-[ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="2_pxhnh"]
-
-[resource]
-script = ExtResource("1_4qosd")
-unlockedAquatics = Array[ExtResource("2_pxhnh")]([])

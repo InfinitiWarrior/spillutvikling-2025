@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=3 format=3 uid="uid://cyg4s2xd2gda6"]
-
-[ext_resource type="Script" path="res://scripts/customResources/GameData.gd" id="1_18c3e"]
-[ext_resource type="Resource" uid="uid://cnvmjv8l8uc7o" path="res://player/UnlockedAquatics.tres" id="2_gndtb"]
-
-[resource]
-script = ExtResource("1_18c3e")
-unlockedAquatics = ExtResource("2_gndtb")

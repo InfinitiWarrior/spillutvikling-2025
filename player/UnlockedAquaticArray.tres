@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="UnlockedAquaticArray" load_steps=3 format=3 uid="uid://jnw4uvvafgkj"]
+
+[ext_resource type="Script" path="res://scripts/customResources/UnlockedAquaticArray.gd" id="1_3gm4q"]
+[ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="2_278wo"]
+
+[resource]
+script = ExtResource("1_3gm4q")
+array = Array[ExtResource("2_278wo")]([])

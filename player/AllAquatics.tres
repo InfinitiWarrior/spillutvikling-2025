@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="AllAquatics" load_steps=4 format=3 uid="uid://c6wug0ncd45qp"]
-
-[ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="1_hrnxn"]
-[ext_resource type="Script" path="res://scripts/customResources/AllAquatics.gd" id="2_gqmq0"]
-[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_twdym"]
-
-[resource]
-script = ExtResource("2_gqmq0")
-allAquatics = Array[ExtResource("1_hrnxn")]([ExtResource("2_twdym")])
