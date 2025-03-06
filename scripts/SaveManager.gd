@@ -1,21 +1,19 @@
 extends Node
 
-var savePath = "user://saves/test_save.tres" # Have to make sure the saves folder exists
-#var aquatic = load("res://base/AquaticArray.tres")
-
 func save():
 	var unlockedAquatic = load("res://player/UnlockedAquaticArray.tres").duplicate() 
 	
 	var gameData = GameData.new()
 	gameData.unlockedAquaticArray = unlockedAquatic
 	
-	print(gameData.unlockedAquaticArray.array)
+	var dir = DirAccess.open("user://")
+	if not dir.dir_exists("user://saves"):
+		dir.make_dir("user://saves")
 
 	ResourceSaver.save(gameData, "user://saves/save.tres")
 
-func loadSave(): 
+func loadSave():
 	var gameData = ResourceLoader.load("user://saves/save.tres")
-	
 	var unlockedAquatic = load("res://player/UnlockedAquaticArray.tres")
 	unlockedAquatic = gameData.unlockedAquaticArray # Overwriting the resource in memory with the save data
 	
