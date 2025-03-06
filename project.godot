@@ -18,6 +18,7 @@ config/icon="res://sprites/icon.svg"
 [autoload]
 
 SaveManager="*res://scripts/SaveManager.gd"
+EntityManager="*res://scripts/EntityManager.gd"
 
 [dotnet]
 
