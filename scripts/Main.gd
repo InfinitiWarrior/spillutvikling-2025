@@ -11,6 +11,8 @@ func _ready() -> void:
 	if unlocked:
 		EntityManager.render(unlocked[0])
 		EntityManager.renderQueue[0].hello()
-	
-	#SaveManager.save()
+		
+	unlocked[0].maximumHealth = 5
+	print(unlocked[0].maximumHealth)
+	SaveManager.save()
 	#SaveManager.loadSave()
