@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="AquaticStats" load_steps=2 format=3 uid="uid://ddhgiritwoprk"]
+[gd_resource type="Resource" script_class="AquaticStats" load_steps=3 format=3 uid="uid://ddhgiritwoprk"]
 
 [ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="1_mxyds"]
+[ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="2_owhsj"]
 
 [resource]
 script = ExtResource("1_mxyds")
@@ -10,3 +11,4 @@ maximumHealth = 50
 power = 5
 defense = 3
 abilityName = "Bubble"
+texture = ExtResource("2_owhsj")
