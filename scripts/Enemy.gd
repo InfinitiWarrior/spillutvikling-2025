@@ -4,10 +4,13 @@ extends CharacterBody2D
 @export var enemyStats : EnemyStats
 
 func _ready():
-	#printStats()
-	pass
+	printStats()
 
 func printStats():
 	if enemyStats:
 		print("Name: ", enemyStats.name)
 		print("Maximum Health: ", enemyStats.maximumHealth)
+		
+
+func hello():
+	print("hello world enemy")

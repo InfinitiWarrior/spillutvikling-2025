@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyArray" load_steps=4 format=3 uid="uid://dbumnoqq4lw57"]
+
+[ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="1_n18j2"]
+[ext_resource type="Script" path="res://scripts/customResources/EnemyArray.gd" id="2_7sfcp"]
+[ext_resource type="Resource" uid="uid://bbt1w84r7h2ly" path="res://resources/stats/enemy/test_enemy.tres" id="2_mmvm3"]
+
+[resource]
+script = ExtResource("2_7sfcp")
+array = Array[ExtResource("1_n18j2")]([ExtResource("2_mmvm3")])

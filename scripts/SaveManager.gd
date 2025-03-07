@@ -8,7 +8,7 @@ func save():
 	gameData.unlockedAquaticArray = unlockedAquatic
 	
 	for aquatic in gameData.unlockedAquaticArray.array:
-		var aquaticCopy = aquatic  # This duplicates the entire resource
+		var aquaticCopy = aquatic.duplicate()  # This duplicates the entire resource
 		gameData.unlockedAquaticArray.array[gameData.unlockedAquaticArray.array.find(aquatic)] = aquaticCopy  # Update with the duplicated version
 	
 	var dir = DirAccess.open("user://")
