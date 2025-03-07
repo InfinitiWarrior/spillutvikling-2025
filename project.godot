@@ -19,6 +19,7 @@ config/icon="res://sprites/icon.svg"
 
 SaveManager="*res://scripts/SaveManager.gd"
 EntityManager="*res://scripts/EntityManager.gd"
+PlayerManager="*res://scripts/PlayerManager.gd"
 
 [dotnet]
 

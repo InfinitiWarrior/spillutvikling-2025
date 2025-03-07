@@ -1,5 +1,7 @@
 extends Node
 
+var playerStats = load("res://player/PlayerStats.tres")
+
 var aquaticArray = load("res://base/AquaticArray.tres")
 var enemyArray = load("res://base/EnemyArray.tres")
 
@@ -30,6 +32,7 @@ func render(stats, type=0):
 		
 		get_tree().current_scene.add_child(aquatic)
 		renderQueue.append(aquatic)
+		return aquatic
 	
 	elif type == 1:
 		var enemyScene = load("res://scenes/Enemy.tscn")
@@ -39,6 +42,7 @@ func render(stats, type=0):
 		
 		get_tree().current_scene.add_child(enemy)
 		enemyRenderQueue.append(enemy)
+		return enemy
 
 func getAquaticArray():
 	return aquaticArray.array

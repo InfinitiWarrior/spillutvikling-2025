@@ -1,18 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu1okn0f6nk60"]
+[gd_scene load_steps=2 format=3 uid="uid://cu1okn0f6nk60"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_5uyf6"]
-[ext_resource type="Script" path="res://scripts/Enemy.gd" id="4_dayik"]
-[ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="4_yxghc"]
-[ext_resource type="Resource" uid="uid://bbt1w84r7h2ly" path="res://resources/stats/enemy/test_enemy.tres" id="5_6bnfw"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5uyf6")
-
-[node name="Enemy" type="CharacterBody2D" parent="."]
-script = ExtResource("4_dayik")
-enemyStats = ExtResource("5_6bnfw")
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
-position = Vector2(1016, 85)
-scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("4_yxghc")
