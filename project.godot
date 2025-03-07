@@ -33,3 +33,7 @@ folder_colors={
 "res://scripts/customResources/": "teal",
 "res://sprites/": "pink"
 }
+
+[global_group]
+
+enemies="a group for enemies"
