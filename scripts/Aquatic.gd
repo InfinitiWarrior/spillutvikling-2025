@@ -2,9 +2,11 @@ class_name Aquatic
 extends CharacterBody2D
 
 @export var aquaticStats : AquaticStats
+@onready var animatedSprite = $AnimatedSprite2D
 
 func _ready():
 	printStats()
+	idle_animate()
 
 func printStats():
 	if aquaticStats:
@@ -20,3 +22,6 @@ func _physics_process(delta):
 
 	velocity = input * speed
 	move_and_slide()
+
+func idle_animate():
+	animatedSprite.play("idle")

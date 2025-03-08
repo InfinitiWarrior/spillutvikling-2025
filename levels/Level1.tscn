@@ -1,14 +1,30 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4hvqq4b3uphb"]
 
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_opb1f"]
-[ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="2_nbbo4"]
-[ext_resource type="Resource" uid="uid://bbt1w84r7h2ly" path="res://resources/stats/enemy/test_enemy.tres" id="3_wqm86"]
+[ext_resource type="Texture2D" uid="uid://d12nxgwcaa3bk" path="res://sprites/icon.svg" id="2_r6go6"]
+[ext_resource type="PackedScene" uid="uid://c6hccte4vjfxl" path="res://scenes/enemies/Wizard.tscn" id="3_khcfi"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_opb1f")
-enemies = Array[ExtResource("2_nbbo4")]([ExtResource("3_wqm86"), ExtResource("3_wqm86")])
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 1152.0
-offset_bottom = 641.0
-color = Color(0, 0.831373, 0.890196, 1)
+offset_bottom = 648.0
+texture = ExtResource("2_r6go6")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Wizard" parent="Enemies" instance=ExtResource("3_khcfi")]
+position = Vector2(768, 171)
+
+[node name="Wizard2" parent="Enemies" instance=ExtResource("3_khcfi")]
+position = Vector2(768, 307)
+
+[node name="Wizard3" parent="Enemies" instance=ExtResource("3_khcfi")]
+position = Vector2(766, 439)
+
+[node name="Wizard4" parent="Enemies" instance=ExtResource("3_khcfi")]
+position = Vector2(885, 248)
+
+[node name="Wizard5" parent="Enemies" instance=ExtResource("3_khcfi")]
+position = Vector2(881, 376)

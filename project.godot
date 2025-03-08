@@ -33,6 +33,8 @@ folder_colors={
 "res://resources/": "purple",
 "res://resources/stats/": "purple",
 "res://scenes/": "yellow",
+"res://scenes/aquatics/": "blue",
+"res://scenes/enemies/": "red",
 "res://scripts/": "green",
 "res://scripts/customResources/": "teal",
 "res://sprites/": "pink"

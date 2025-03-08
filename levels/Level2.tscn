@@ -1,14 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://be2ncioso1cjd"]
 
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_lyvlc"]
-[ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="2_0menl"]
-[ext_resource type="Resource" uid="uid://bbt1w84r7h2ly" path="res://resources/stats/enemy/test_enemy.tres" id="3_hhb4a"]
 
-[node name="Level1" type="Node"]
+[sub_resource type="Gradient" id="Gradient_g7g8o"]
+colors = PackedColorArray(0.372749, 0.80156, 0.918178, 0.760784, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j7peu"]
+gradient = SubResource("Gradient_g7g8o")
+
+[node name="Level2" type="Node"]
 script = ExtResource("1_lyvlc")
-enemies = Array[ExtResource("2_0menl")]([ExtResource("3_hhb4a")])
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 1152.0
-offset_bottom = 641.0
-color = Color(0.987551, 0.642987, 0.379424, 1)
+offset_bottom = 648.0
+texture = SubResource("GradientTexture1D_j7peu")
