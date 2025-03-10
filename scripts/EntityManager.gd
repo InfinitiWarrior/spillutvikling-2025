@@ -1,5 +1,7 @@
 extends Node
 
+var playerStats = load("res://player/PlayerStats.tres")
+
 var aquaticArray = load("res://base/AquaticArray.tres")
 var enemyArray = load("res://base/EnemyArray.tres")
 
@@ -23,22 +25,22 @@ func unlock(aquaticStats : AquaticStats):
 
 func render(stats, type=0):
 	if type == 0:
-		var aquaticScene = load("res://scenes/Aquatic.tscn")
+		var aquaticScenePath = "res://scenes/aquatics/" + stats + ".tscn"
+		var aquaticScene = load(aquaticScenePath)
 		var aquatic = aquaticScene.instantiate()
-		aquatic.get_node("Sprite2D").texture = stats.texture
-		aquatic.aquaticStats = stats
 		
 		get_tree().current_scene.add_child(aquatic)
 		renderQueue.append(aquatic)
+		return aquatic
 	
 	elif type == 1:
-		var enemyScene = load("res://scenes/Enemy.tscn")
+		var enemyScenePath = "res://scenes/enemies/" + stats + ".tscn"
+		var enemyScene = load(enemyScenePath)
 		var enemy = enemyScene.instantiate()
-		enemy.get_node("Sprite2D").texture = stats.texture
-		enemy.enemyStats = stats
 		
 		get_tree().current_scene.add_child(enemy)
 		enemyRenderQueue.append(enemy)
+		return enemy
 
 func getAquaticArray():
 	return aquaticArray.array

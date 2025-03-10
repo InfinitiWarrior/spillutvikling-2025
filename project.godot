@@ -19,6 +19,8 @@ config/icon="res://sprites/icon.svg"
 
 SaveManager="*res://scripts/SaveManager.gd"
 EntityManager="*res://scripts/EntityManager.gd"
+PlayerManager="*res://scripts/PlayerManager.gd"
+LevelManager="*res://scripts/LevelManager.gd"
 
 [dotnet]
 
@@ -27,8 +29,12 @@ project/assembly_name="Mildly Infuriating Aquatic Creatures Return of the Axolot
 [file_customization]
 
 folder_colors={
+"res://levels/": "orange",
+"res://resources/": "purple",
 "res://resources/stats/": "purple",
 "res://scenes/": "yellow",
+"res://scenes/aquatics/": "blue",
+"res://scenes/enemies/": "red",
 "res://scripts/": "green",
 "res://scripts/customResources/": "teal",
 "res://sprites/": "pink"

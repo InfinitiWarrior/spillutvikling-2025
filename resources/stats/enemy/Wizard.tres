@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=3 format=3 uid="uid://cn2iu3ha8mdpt"]
+
+[ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="1_m2rlj"]
+[ext_resource type="Texture2D" uid="uid://bhbabulv13nxv" path="res://sprites/wizard/wizard attack.png" id="2_iy370"]
+
+[resource]
+script = ExtResource("1_m2rlj")
+id = 2
+name = "Wizard"
+maximumHealth = 20
+power = 5
+defense = 3
+abilityName = "Fire"
+texture = ExtResource("2_iy370")

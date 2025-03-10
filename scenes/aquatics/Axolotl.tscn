@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=3 uid="uid://iuejci4lrnnd"]
+
+[ext_resource type="Script" path="res://scripts/Aquatic.gd" id="1_i0v0u"]
+[ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="2_kgfo1"]
+[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_n8qxt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(0, 240, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h8w8"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(0, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk6jr"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(78, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3147v"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(156, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0jts"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(156, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33bb6"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(78, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw74h"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(0, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwck"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(0, 0, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ii5v"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(78, 0, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxya3"]
+atlas = ExtResource("2_kgfo1")
+region = Rect2(156, 0, 78, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8vgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h36af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h8w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk6jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3147v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0jts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33bb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw74h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ii5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxya3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hu74m"]
+radius = 25.0
+height = 82.0
+
+[node name="Axolotl" type="CharacterBody2D"]
+script = ExtResource("1_i0v0u")
+aquaticStats = ExtResource("2_n8qxt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.90735e-06, 2.86102e-06)
+scale = Vector2(1.40705, 1.40705)
+sprite_frames = SubResource("SpriteFrames_i8vgo")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_hu74m")
