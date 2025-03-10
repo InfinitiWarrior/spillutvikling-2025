@@ -32,7 +32,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			# Check if the click is within the Area2D's collision shape using get_rect()
-			if collision_shape.shape is RectangleShape2D:
+			if collision_shape:
 				var local_pos = collision_shape.to_local(event.position)
 				var rect = collision_shape.shape.get_rect()
 				if rect.has_point(local_pos) and event.pressed:
