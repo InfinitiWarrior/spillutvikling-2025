@@ -4,69 +4,51 @@ var is_dragging = false
 var line : Line2D
 var player_position : Vector2
 
-@onready var collision_shape : CollisionShape2D = $CollisionShape2D
+# Offset for when the player isn't at (0, 0)
+var offset : Vector2
 
-var snapped_enemy : Area2D = null
-var snap_distance = 50  # Max distance for snapping
+# Area2D CollisionShape2D for detecting the click inside the player
+var collision_shape : CollisionShape2D
 
 func _ready():
-	# Set player position correctly
+	# Set the player position and handle offset
 	player_position = position
+	offset = position  # Keep track of the offset
+
+	# Access the CollisionShape2D from the scene
+	collision_shape = $CollisionShape2D
 
 	# Create Line2D for drawing attack line
 	line = Line2D.new()
 	line.width = 2
 	line.default_color = Color.GREEN
 	add_child(line)
-
-	# Enable input
+	
+	# Enable input events for this Area2D node
 	set_process_input(true)
 
+# Detect mouse button press, move, and release
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed and is_click_inside(event.position):
-				is_dragging = true
-			elif is_dragging and not event.pressed:
-				is_dragging = false
-				snapped_enemy = null  # Reset snap on release
+			# Check if the click is within the Area2D's collision shape using get_rect()
+			if collision_shape:
+				var local_pos = collision_shape.to_local(event.position)
+				var rect = collision_shape.shape.get_rect()
+				if rect.has_point(local_pos) and event.pressed:
+					# Start dragging when clicked inside the Area2D
+					is_dragging = true
+					print("Drag started at: ", event.position)
+				elif is_dragging and not event.pressed:
+					# When released, print the attack info and stop dragging
+					print("Drag released at: ", event.position)
+					is_dragging = false
 
-	elif event is InputEventMouseMotion and is_dragging:
-		update_attack_indicator()
-
-func is_click_inside(mouse_pos) -> bool:
-	var local_pos = to_local(mouse_pos)
-	if collision_shape.shape is RectangleShape2D:
-		var rect = collision_shape.shape.get_rect()
-		return rect.has_point(local_pos)
-	return false
-
-func update_attack_indicator():
-	var mouse_local_pos = get_local_mouse_position()
-
-	# Find nearest enemy
-	snapped_enemy = get_closest_enemy(global_position + mouse_local_pos)
-
-	# Draw line relative to the player
-	line.clear_points()
-	line.add_point(Vector2.ZERO)  # Start from player's position (local 0,0)
-
-	if snapped_enemy:
-		line.add_point(snapped_enemy.position - position)  # Make it relative
-		line.default_color = Color.RED
-	else:
-		line.add_point(mouse_local_pos)  # Local mouse position relative to player
-		line.default_color = Color.GREEN
-
-func get_closest_enemy(mouse_pos) -> Area2D:
-	var enemies = get_tree().get_nodes_in_group("enemies")
-	var closest = null
-	var min_distance = snap_distance
-
-	for enemy in enemies:
-		var distance = enemy.global_position.distance_to(mouse_pos)
-		if distance < min_distance:
-			min_distance = distance
-			closest = enemy
-
-	return closest
+	if event is InputEventMouseMotion:
+		if is_dragging:
+			# Update line position while dragging
+			line.clear_points()  # Clear previous points
+			line.add_point(player_position)  # Adjust for offset by using the player's actual position
+			line.add_point(get_local_mouse_position())  # Follow the mouse position
+		else:
+			line.clear_points()
