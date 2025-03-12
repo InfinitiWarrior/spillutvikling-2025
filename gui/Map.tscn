@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://p7eq53u6ie00"]
+
+[ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LockedLevelNode.tscn" id="1_c5viu"]
+[ext_resource type="Script" path="res://gui/Map.gd" id="1_dft7m"]
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dft7m")
+
+[node name="MapCamera" type="Camera2D" parent="."]
+
+[node name="LockedNode" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 321.0
+offset_right = 79.0
+offset_bottom = 361.0
+
+[node name="LockedNode2" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 322.0
+offset_right = 208.0
+offset_bottom = 362.0
+
+[node name="LockedNode3" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 282.0
+offset_right = 362.0
+offset_bottom = 322.0
+
+[node name="LockedNode4" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 461.0
+offset_right = 587.0
+offset_bottom = 501.0
+
+[node name="LockedNode5" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 182.0
+offset_right = 865.0
+offset_bottom = 222.0
+
+[node name="LockedNode6" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 356.0
+offset_right = 1120.0
+offset_bottom = 396.0
+
+[node name="LockedNode7" parent="." instance=ExtResource("1_c5viu")]
+layout_mode = 0
+offset_left = 1479.0
+offset_top = 512.0
+offset_right = 1519.0
+offset_bottom = 552.0
