@@ -24,13 +24,13 @@ func _input(event):
 				print("Drag released at: ", event.position)
 				is_dragging = false
 
+
 	if event is InputEventMouseMotion and is_dragging:
 		line.clear_points()
 		line.add_point(position)
-		line.add_point(get_local_mouse_position())
+		if Global.is_snapped == false:
+			line.add_point(get_local_mouse_position())
+		if Global.is_snapped == true:
+			line.add_point(Global.enemy_center - global_position)
 	else:
 		line.clear_points()
-
-# Function to change line color
-func _change_line_color(new_color: Color = Color.RED):
-	line.default_color = new_color

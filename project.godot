@@ -21,6 +21,7 @@ SaveManager="*res://scripts/SaveManager.gd"
 EntityManager="*res://scripts/EntityManager.gd"
 PlayerManager="*res://scripts/PlayerManager.gd"
 LevelManager="*res://scripts/LevelManager.gd"
+Global="*res://scripts/global.gd"
 
 [dotnet]
 
