@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://p7eq53u6ie00"]
 
-[ext_resource type="Script" path="res://gui/Map.gd" id="1_dft7m"]
-[ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LevelNode.tscn" id="2_58a1p"]
+[ext_resource type="Script" path="res://gui/scripts/Map.gd" id="1_dft7m"]
+[ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LevelNodeButton.tscn" id="2_58a1p"]
 [ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="3_qcbeh"]
 
 [node name="Map" type="Control"]
@@ -36,6 +36,7 @@ offset_left = 162.0
 offset_top = 324.0
 offset_right = 202.0
 offset_bottom = 364.0
+level = 1
 
 [node name="LevelNode2" parent="Nodes" instance=ExtResource("2_58a1p")]
 layout_mode = 0
@@ -43,6 +44,7 @@ offset_left = 542.0
 offset_top = 307.0
 offset_right = 582.0
 offset_bottom = 347.0
+level = 2
 
 [node name="LevelNode3" parent="Nodes" instance=ExtResource("2_58a1p")]
 layout_mode = 0
@@ -50,3 +52,4 @@ offset_left = 856.0
 offset_top = 267.0
 offset_right = 896.0
 offset_bottom = 307.0
+level = 3

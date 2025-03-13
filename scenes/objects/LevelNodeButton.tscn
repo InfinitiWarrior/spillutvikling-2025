@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cx8gowrvkq0yc"]
 
-[ext_resource type="Script" path="res://scenes/objects/LevelNode.gd" id="1_1wfrc"]
+[ext_resource type="Script" path="res://gui/scripts/LevelNodeButton.gd" id="1_1wfrc"]
 [ext_resource type="Texture2D" uid="uid://c2px6cf1lrefv" path="res://sprites/lockedCircle.png" id="1_smmxq"]
 
 [node name="LevelNode" type="TextureButton"]
@@ -10,5 +10,6 @@ script = ExtResource("1_1wfrc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2.5, 2.5)
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(3, 3)
 texture = ExtResource("1_smmxq")

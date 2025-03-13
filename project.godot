@@ -17,10 +17,11 @@ config/icon="res://sprites/icon.svg"
 
 [autoload]
 
-SaveManager="*res://scripts/SaveManager.gd"
-EntityManager="*res://scripts/EntityManager.gd"
-PlayerManager="*res://scripts/PlayerManager.gd"
-LevelManager="*res://scripts/LevelManager.gd"
+SaveManager="*res://scripts/singleton/SaveManager.gd"
+EntityManager="*res://scripts/singleton/EntityManager.gd"
+PlayerManager="*res://scripts/singleton/PlayerManager.gd"
+LevelManager="*res://scripts/singleton/LevelManager.gd"
+SceneManager="*res://scripts/singleton/SceneManager.gd"
 
 [dotnet]
 
@@ -37,5 +38,6 @@ folder_colors={
 "res://scenes/enemies/": "red",
 "res://scripts/": "green",
 "res://scripts/customResources/": "teal",
+"res://scripts/singleton/": "red",
 "res://sprites/": "pink"
 }
