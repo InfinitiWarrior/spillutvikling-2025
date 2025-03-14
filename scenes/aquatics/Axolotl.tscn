@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://iuejci4lrnnd"]
 
-[ext_resource type="Script" path="res://scripts/Aquatic.gd" id="1_i0v0u"]
+[ext_resource type="Script" path="res://scripts/other/Aquatic.gd" id="1_i0v0u"]
 [ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="2_kgfo1"]
 [ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_n8qxt"]
-[ext_resource type="Script" path="res://scripts/attack-indicator.gd" id="4_dpvn6"]
+[ext_resource type="Script" path="res://scripts/other/attack-indicator.gd" id="4_dpvn6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
 atlas = ExtResource("2_kgfo1")
@@ -84,22 +84,25 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hu74m"]
-radius = 25.0
-height = 82.0
+radius = 8.375
+height = 32.0
 
 [node name="Axolotl" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_i0v0u")
 aquaticStats = ExtResource("2_n8qxt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1.90735e-06, 2.86102e-06)
-scale = Vector2(1.40705, 1.40705)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_i8vgo")
 animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
 script = ExtResource("4_dpvn6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_hu74m")

@@ -9,16 +9,6 @@ var unlockedAquaticArray = load("res://player/UnlockedAquaticArray.tres")
 
 var renderQueue = []
 
-func getAquatic(id : int):
-	for aquaticEntity in getAquaticArray():
-		if aquaticEntity.id == id:
-			return aquaticEntity
-
-func getEnemy(id : int):
-	for enemyEntity in getEnemyArray():
-		if enemyEntity.id == id:
-			return enemyEntity
-
 func unlock(aquaticStats : AquaticStats):
 	unlockedAquaticArray.array.append(aquaticStats)
 
@@ -40,6 +30,15 @@ func getUnlockedAquaticArray():
 func getEnemyArray():
 	return enemyArray.array
 
+func getAquatic(id : int):
+	for aquaticEntity in getAquaticArray():
+		if aquaticEntity.id == id:
+			return aquaticEntity
+
+func getEnemy(id : int):
+	for enemyEntity in getEnemyArray():
+		if enemyEntity.id == id:
+			return enemyEntity
 
 
 func printAquaticArray(array="", all=false):

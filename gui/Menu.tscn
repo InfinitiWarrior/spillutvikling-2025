@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7h2d3m1wnroh"]
+[gd_scene load_steps=6 format=3 uid="uid://b7h2d3m1wnroh"]
 
-[sub_resource type="Gradient" id="Gradient_gg3h2"]
+[ext_resource type="Script" path="res://scripts/gui/loadButton.gd" id="2_nh6ir"]
+[ext_resource type="Script" path="res://scripts/gui/newGameButton.gd" id="3_yuly0"]
+[ext_resource type="Script" path="res://scripts/gui/quitButton.gd" id="4_qvgri"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_hn2ff"]
-gradient = SubResource("Gradient_gg3h2")
+[sub_resource type="Gradient" id="Gradient_yoyl7"]
+colors = PackedColorArray(0, 0, 0.329412, 1, 0, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kht0i"]
+gradient = SubResource("Gradient_yoyl7")
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -18,9 +23,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture1D_hn2ff")
+texture = SubResource("GradientTexture2D_kht0i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 0)
@@ -30,26 +36,36 @@ anchor_left = 0.393
 anchor_top = 0.395
 anchor_right = 0.567
 anchor_bottom = 0.593
-offset_left = 0.263977
+offset_left = 27.264
 offset_top = 0.0399933
-offset_right = -0.184021
-offset_bottom = -0.264038
+offset_right = 26.816
+offset_bottom = 1.73599
 theme_override_constants/separation = 5
 
-[node name="LoadButton" type="Button" parent="VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
-text = "Load"
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+script = ExtResource("2_nh6ir")
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
 text = "New Game"
+script = ExtResource("3_yuly0")
 
-[node name="SaveButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
 text = "Quit"
+script = ExtResource("4_qvgri")
+
+[connection signal="button_down" from="VBoxContainer/ContinueButton" to="VBoxContainer/ContinueButton" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/NewGameButton" to="VBoxContainer/NewGameButton" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_button_down"]
