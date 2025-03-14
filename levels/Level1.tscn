@@ -18,21 +18,21 @@ texture = ExtResource("2_r6go6")
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Wizard" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1493, 262)
+position = Vector2(1411, 264)
 scale = Vector2(2, 2)
 
 [node name="Wizard2" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1495, 516)
+position = Vector2(1413, 518)
 scale = Vector2(2, 2)
 
 [node name="Wizard3" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1493, 772)
+position = Vector2(1411, 774)
 scale = Vector2(2, 2)
 
 [node name="Wizard4" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1660, 395)
+position = Vector2(1578, 397)
 scale = Vector2(2, 2)
 
 [node name="Wizard5" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1656, 649)
+position = Vector2(1574, 651)
 scale = Vector2(2, 2)

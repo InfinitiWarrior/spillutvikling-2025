@@ -1,5 +1,6 @@
 extends Area2D
 
+
 var is_dragging = false
 var line : Line2D
 var collision_shape : CollisionShape2D
@@ -28,14 +29,17 @@ func _input(event):
 	if event is InputEventMouseMotion and is_dragging:
 		line.clear_points()
 		line.add_point(position)
+		
 		if Global.is_snapped_to_enemies == false:
 			line.add_point(get_local_mouse_position())
 			line.default_color = Color.GREEN
 		if Global.is_snapped_to_enemies == true:
 			line.default_color = Color.RED
-			line.add_point(Global.enemy_center - global_position)
+			print(global_position)
+			line.add_point(to_local(Global.enemy_center))
 	else:
 		line.clear_points()
+	
 	if is_dragging == false and Global.is_snapped_to_enemies == true:
 		Global.is_snapped_to_enemies = false
 		print("damage dealt")

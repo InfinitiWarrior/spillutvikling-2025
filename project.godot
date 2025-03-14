@@ -22,6 +22,7 @@ EntityManager="*res://scripts/singleton/EntityManager.gd"
 PlayerManager="*res://scripts/singleton/PlayerManager.gd"
 LevelManager="*res://scripts/singleton/LevelManager.gd"
 SceneManager="*res://scripts/singleton/SceneManager.gd"
+Global="*res://scripts/global.gd"
 
 [display]
 

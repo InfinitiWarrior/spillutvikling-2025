@@ -15,6 +15,10 @@ func _ready():
 	
 	placeAquatics()
 
+
+
+
+
 #func _process(delta):
 	#resize() Using keep aspect ratio instead
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6hccte4vjfxl"]
+[gd_scene load_steps=17 format=3 uid="uid://c6hccte4vjfxl"]
 
 [ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="1_67scu"]
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_xj7em"]
 [ext_resource type="Resource" path="res://resources/stats/enemy/Wizard.tres" id="2_a258x"]
+[ext_resource type="Script" path="res://scripts/other/area_2d-enemy-test.gd" id="4_wg5pr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
 atlas = ExtResource("1_67scu")
@@ -99,6 +100,7 @@ animation = &"idle"
 frame_progress = 0.324581
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_wg5pr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_lnvtc")
