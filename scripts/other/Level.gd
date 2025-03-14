@@ -15,8 +15,8 @@ func _ready():
 	
 	placeAquatics()
 
-func _process(delta):
-	resize()
+#func _process(delta):
+	#resize() Using keep aspect ratio instead
 
 func resize():
 	var currentViewportSize = Vector2(get_viewport().size)
