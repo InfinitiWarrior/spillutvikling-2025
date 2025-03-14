@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="1_67scu"]
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_xj7em"]
-[ext_resource type="Resource" path="res://resources/stats/enemy/Wizard.tres" id="2_a258x"]
-[ext_resource type="Script" path="res://scripts/other/area_2d-enemy-test.gd" id="4_wg5pr"]
+[ext_resource type="Resource" uid="uid://cn2iu3ha8mdpt" path="res://resources/stats/enemy/Wizard.tres" id="2_a258x"]
+[ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_wg5pr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
 atlas = ExtResource("1_67scu")
