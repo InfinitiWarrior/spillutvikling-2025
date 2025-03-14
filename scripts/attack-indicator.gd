@@ -36,3 +36,6 @@ func _input(event):
 			line.add_point(Global.enemy_center - global_position)
 	else:
 		line.clear_points()
+	if is_dragging == false and Global.is_snapped_to_enemies == true:
+		Global.is_snapped_to_enemies = false
+		print("damage dealt")

@@ -12,6 +12,5 @@ func _on_mouse_entered():
 	print("Cursor moved to enemy at ", Global.enemy_center)
 
 func _on_mouse_exited():
-	emit_signal("cursor_snapped", Vector2.ZERO)  # Reset cursor snapping when it exits
 	print("Cursor exited enemy area!")
 	Global.is_snapped_to_enemies = false

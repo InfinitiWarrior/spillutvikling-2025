@@ -2,6 +2,7 @@ class_name Enemy
 extends CharacterBody2D
 
 @export var enemyStats : EnemyStats
+@onready var health = enemyStats.maximumHealth 
 @onready var animatedSprite = $AnimatedSprite2D
 
 func _ready():
@@ -18,3 +19,6 @@ func hello():
 
 func idle_animate():
 	animatedSprite.play("idle")
+
+func take_dmg():
+	health - 1
