@@ -28,9 +28,11 @@ func _input(event):
 	if event is InputEventMouseMotion and is_dragging:
 		line.clear_points()
 		line.add_point(position)
-		if Global.is_snapped == false:
+		if Global.is_snapped_to_enemies == false:
 			line.add_point(get_local_mouse_position())
-		if Global.is_snapped == true:
+			line.default_color = Color.GREEN
+		if Global.is_snapped_to_enemies == true:
+			line.default_color = Color.RED
 			line.add_point(Global.enemy_center - global_position)
 	else:
 		line.clear_points()

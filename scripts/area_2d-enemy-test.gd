@@ -6,7 +6,7 @@ func _ready():
 	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
 
 func _on_mouse_entered():
-	Global.is_snapped = true 
+	Global.is_snapped_to_enemies = true 
 	Global.enemy_center = get_parent().global_position # Get the center of the Area2D (enemy's position)
 	Input.warp_mouse(Global.enemy_center)  # Move the cursor to the enemy's center
 	print("Cursor moved to enemy at ", Global.enemy_center)
@@ -14,4 +14,4 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	emit_signal("cursor_snapped", Vector2.ZERO)  # Reset cursor snapping when it exits
 	print("Cursor exited enemy area!")
-	Global.is_snapped = false
+	Global.is_snapped_to_enemies = false
