@@ -35,7 +35,6 @@ func _input(event):
 			line.default_color = Color.GREEN
 		if Global.is_snapped_to_enemies == true:
 			line.default_color = Color.RED
-			print(global_position)
 			line.add_point(to_local(Global.enemy_center))
 	else:
 		line.clear_points()
