@@ -7,4 +7,3 @@ extends Resource
 @export var power : int
 @export var defense : int
 @export var abilityName : String
-@export var texture: Texture

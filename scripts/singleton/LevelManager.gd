@@ -28,6 +28,9 @@ func addLevel(scene):
 func loadScene():
 	get_tree().change_scene_to_packed(current.scene)
 
+func getCurrentScene():
+	return get_tree().current_scene
+
 func next():
 	current = current.next
 	return self

@@ -2,23 +2,20 @@ class_name Enemy
 extends CharacterBody2D
 
 @export var enemyStats : EnemyStats
-@onready var health = enemyStats.maximumHealth 
+@onready var health = enemyStats.maximumHealth
+@export var healthbar : TextureProgressBar
 @onready var animatedSprite = $AnimatedSprite2D
 
 func _ready():
-	printStats()
+	healthbar.max_value = enemyStats.maximumHealth
+	healthbar.value = health
 	idle_animate()
-
-func printStats():
-	if enemyStats:
-		print("Name: ", enemyStats.name)
-		#print("Maximum Health: ", enemyStats.maximumHealth)
-
-func hello():
-	print("hello world enemy")
 
 func idle_animate():
 	animatedSprite.play("idle")
 
-func take_dmg():
-	health - 1
+func take_damage(damage):
+	print("Took ", damage, " damage")
+	health -= damage
+	print(health)
+	healthbar.value = health

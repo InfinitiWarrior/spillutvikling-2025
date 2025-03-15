@@ -4,14 +4,11 @@ extends CharacterBody2D
 @export var aquaticStats : AquaticStats
 @onready var animatedSprite = $AnimatedSprite2D
 
+var turnReady = true
+
 func _ready():
-	printStats()
 	idle_animate()
 
-func printStats():
-	if aquaticStats:
-		print("Name: ", aquaticStats.name)
-		print("Maximum Health: ", aquaticStats.maximumHealth)
 
 var speed = 800.0
 func _physics_process(delta):

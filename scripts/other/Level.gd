@@ -8,19 +8,27 @@ var enemies
 var aquatics
 
 func _ready():
+	initialize()
+
+func _process(delta):
+	if isEnemyTurn():
+		#print("Enemy turn")
+		pass
+	else:
+		pass
+func isEnemyTurn():
+	for aquatic in aquatics:
+		if aquatic.turnReady:
+			return false
+	return true
+
+func initialize():
 	lastViewportSize = get_viewport().size
 	background = get_node("Background")
 
 	enemies = get_node("Enemies").get_children() if get_node("Enemies") else null
 	
 	placeAquatics()
-
-
-
-
-
-#func _process(delta):
-	#resize() Using keep aspect ratio instead
 
 func resize():
 	var currentViewportSize = Vector2(get_viewport().size)
@@ -45,6 +53,8 @@ func resize():
 func placeAquatics():
 	for aquatic in EntityManager.getUnlockedAquaticArray():
 		EntityManager.render(aquatic.name)
+	
+	aquatics = EntityManager.renderQueue
 	
 	var total_aquatics = EntityManager.renderQueue.size()
 	
