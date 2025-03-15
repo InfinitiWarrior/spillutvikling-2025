@@ -17,7 +17,7 @@ func _ready():
 	set_process_input(true)
 #
 func _input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and not Global.attacking:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var local_pos = collision_shape.to_local(event.position)
 			var rect = collision_shape.shape.get_rect()
@@ -49,7 +49,7 @@ func _input(event):
 	if not is_dragging and enemySelected:
 		get_parent().turnReady = false
 		enemySelected = false
-		enemy.take_damage(10)
+		get_parent().attack(enemy)
 
 func connectToEnemies():
 	for enemy in root.enemies:

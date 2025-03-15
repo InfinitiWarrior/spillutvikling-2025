@@ -16,6 +16,7 @@ func _process(delta):
 		pass
 	else:
 		pass
+
 func isEnemyTurn():
 	for aquatic in aquatics:
 		if aquatic.turnReady:

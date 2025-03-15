@@ -1,7 +1,3 @@
 extends Node
 
-var is_snapped_to_enemies = false
-var is_snapped_to_teamate = false
-var enemy_center = null
-
-var selected_enemy = null
+var attacking = false

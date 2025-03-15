@@ -14,6 +14,9 @@ func _ready():
 func idle_animate():
 	animatedSprite.play("idle")
 
+func attack(target):
+	target.take_damage(enemyStats.power)
+
 func take_damage(damage):
 	print("Took ", damage, " damage")
 	health -= damage
