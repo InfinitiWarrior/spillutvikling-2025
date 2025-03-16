@@ -8,3 +8,6 @@ func Menu():
 
 func Map():
 	loadScene("res://gui/Map.tscn")
+
+func RewardScreen():
+	loadScene("res://gui/RewardScreen.tscn")

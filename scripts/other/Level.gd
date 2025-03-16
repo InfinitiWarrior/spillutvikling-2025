@@ -1,21 +1,42 @@
 extends Node
 class_name Level
 
-var background
-var lastViewportSize : Vector2
-
 var enemies
 var aquatics
+
+@export var rewards : Reward
+
+var enemyToAttack = 0
 
 func _ready():
 	initialize()
 
 func _process(delta):
-	if isEnemyTurn():
-		#print("Enemy turn")
-		pass
-	else:
-		pass
+	removeDead()
+	
+	if gameOver() and not Global.attacking: # Global.attacking waits for the attack to finish
+		EntityManager.renderQueue = [] # We reset the renderQueue
+		print("Rewards", rewards)
+		Global.reward = rewards
+		SceneManager.RewardScreen()
+	
+	elif isEnemyTurn() and not Global.attacking: # Global.attacking is used so that two things can't attack at the same time
+		if is_instance_valid(enemies[enemyToAttack]):
+			enemies[enemyToAttack].attack(aquatics.pick_random())
+		enemyToAttack += 1
+		
+		if enemyToAttack == enemies.size(): # All enemies have attacked when this is true
+			enemyToAttack = 0
+			resetTurns()
+
+func gameOver():
+	if not enemies or not aquatics:
+		return true
+	return false
+
+func resetTurns():
+	for aquatic in aquatics:
+		aquatic.turnReady = true
 
 func isEnemyTurn():
 	for aquatic in aquatics:
@@ -23,33 +44,14 @@ func isEnemyTurn():
 			return false
 	return true
 
-func initialize():
-	lastViewportSize = get_viewport().size
-	background = get_node("Background")
+func removeDead():
+	enemies = enemies.filter(func(enemy): return is_instance_valid(enemy))
+	aquatics = aquatics.filter(func(aquatic): return is_instance_valid(aquatic))
 
+func initialize():
 	enemies = get_node("Enemies").get_children() if get_node("Enemies") else null
 	
 	placeAquatics()
-
-func resize():
-	var currentViewportSize = Vector2(get_viewport().size)
-	
-	if currentViewportSize != lastViewportSize:
-		var factor = currentViewportSize / lastViewportSize
-		
-		background.size = currentViewportSize
-		
-		if enemies:
-			for enemy in enemies:
-				enemy.global_position *= factor
-				enemy.scale *= factor
-	
-		if EntityManager.renderQueue:
-			for aquatic in EntityManager.renderQueue:
-				aquatic.global_position *= factor
-				aquatic.scale *= factor
-
-		lastViewportSize = currentViewportSize
 
 func placeAquatics():
 	for aquatic in EntityManager.getUnlockedAquaticArray():

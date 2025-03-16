@@ -7,6 +7,6 @@ script = ExtResource("1_mxyds")
 id = 1
 name = "Axolotl"
 maximumHealth = 50
-power = 15
+power = 100
 defense = 3
 abilityName = "Bubble"
