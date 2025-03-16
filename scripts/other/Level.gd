@@ -16,15 +16,14 @@ func _process(delta):
 	
 	if gameOver() and not Global.attacking: # Global.attacking waits for the attack to finish
 		EntityManager.renderQueue = [] # We reset the renderQueue
-		print("Rewards", rewards)
-		Global.reward = rewards
+		if aquatics.size() > 0: # Victory
+			Global.reward = rewards
 		SceneManager.RewardScreen()
 	
 	elif isEnemyTurn() and not Global.attacking: # Global.attacking is used so that two things can't attack at the same time
-		if is_instance_valid(enemies[enemyToAttack]):
-			enemies[enemyToAttack].attack(aquatics.pick_random())
+		enemies[enemyToAttack].attack(aquatics.pick_random())
 		enemyToAttack += 1
-		
+
 		if enemyToAttack == enemies.size(): # All enemies have attacked when this is true
 			enemyToAttack = 0
 			resetTurns()

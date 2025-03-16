@@ -11,4 +11,5 @@ func _input(event):
 		var radius = get_node("Sprite2D").texture.get_height()
 		
 		if (mousePosition.x > nodePosition.x - radius and mousePosition.x < nodePosition.x + radius) and (mousePosition.y > nodePosition.y - radius and mousePosition.y < nodePosition.y + radius):
-			emit_signal("level_pressed", self)
+			if PlayerManager.playerStats.levelUnlocked >= level:
+				emit_signal("level_pressed", self)
