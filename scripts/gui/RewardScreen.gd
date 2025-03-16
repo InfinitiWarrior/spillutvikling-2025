@@ -6,12 +6,15 @@ var stats = PlayerManager.playerStats
 
 func _ready():
 	if not isAlreadyCleared():
+		print("LEVEL NOT CLEARED")
 		if rewards.levelUnlocked:
-			print("LEVEL ALREADY CLEARED")
 			stats.levelUnlocked = rewards.levelUnlocked
 		
 		if rewards.aquaticUnlocked:
 			EntityManager.unlock(rewards.aquaticUnlocked)
+	else:
+		print("rewards unlocked level ", stats.levelUnlocked)
+		print("LEVEL ALREADY CLEARED")
 		
 	if rewards.pearls:
 		stats.pearls += rewards.pearls

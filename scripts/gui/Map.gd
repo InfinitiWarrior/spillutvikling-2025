@@ -9,8 +9,6 @@ func _ready():
 	camera = get_node("MapCamera")
 	nodes = get_node("Nodes")
 	
-	var levelUnlocked = EntityManager.playerStats.levelUnlocked
-
 	loadMapState()
 
 func _on_level_pressed(node):
@@ -20,13 +18,15 @@ func _process(delta):
 	moveCamera()
 	
 func loadMapState():
-	var levelUnlocked = EntityManager.playerStats.levelUnlocked
+	var levelUnlocked = PlayerManager.playerStats.levelUnlocked
 
 	var enumerate = 1
 	for node in nodes.get_children():
 		node.connect("level_pressed", Callable(self, "_on_level_pressed"))
 		
+		#print(enumerate, levelUnlocked)
 		if enumerate <= levelUnlocked:
+			#print(enumerate, levelUnlocked)
 			node.get_node("Sprite2D").texture = load("res://sprites/unlockedCircle.png")
 		enumerate += 1
 

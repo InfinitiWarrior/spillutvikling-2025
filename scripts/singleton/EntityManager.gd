@@ -1,7 +1,5 @@
 extends Node
 
-var playerStats = load("res://player/PlayerStats.tres")
-
 var aquaticArray = load("res://base/AquaticArray.tres")
 var enemyArray = load("res://base/EnemyArray.tres")
 
