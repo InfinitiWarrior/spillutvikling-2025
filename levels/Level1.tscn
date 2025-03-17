@@ -9,7 +9,7 @@
 script = ExtResource("2_e7acp")
 pearls = 3
 corals = 3
-experience = 3
+experience = 80
 levelUnlocked = 2
 
 [node name="Level1" type="Node"]

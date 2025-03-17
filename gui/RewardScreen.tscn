@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dq66olqbfjeuy" path="res://sprites/test.jpg" id="1_ol457"]
 [ext_resource type="Script" path="res://scripts/gui/RewardScreen.gd" id="1_ycfoe"]
-[ext_resource type="Script" path="res://scripts/gui/newGameButton.gd" id="3_5ctvp"]
+[ext_resource type="Script" path="res://scripts/gui/RewardContiueButton.gd" id="3_d8w2l"]
 
 [node name="RewardScreen" type="Control"]
 layout_mode = 3
@@ -38,6 +38,7 @@ text = "REWARD"
 
 [node name="RewardContinueButton" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
 offset_left = 859.0
 offset_top = 920.0
 offset_right = 1077.0
@@ -45,6 +46,6 @@ offset_bottom = 988.0
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
 text = "Continue"
-script = ExtResource("3_5ctvp")
+script = ExtResource("3_d8w2l")
 
 [connection signal="button_down" from="RewardContinueButton" to="RewardContinueButton" method="_on_button_down"]

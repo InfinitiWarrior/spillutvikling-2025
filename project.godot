@@ -23,6 +23,7 @@ PlayerManager="*res://scripts/singleton/PlayerManager.gd"
 LevelManager="*res://scripts/singleton/LevelManager.gd"
 SceneManager="*res://scripts/singleton/SceneManager.gd"
 Global="*res://scripts/global.gd"
+GlobalUI="*res://scripts/GlobalUI.tscn"
 
 [display]
 

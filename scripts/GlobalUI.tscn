@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://sh3dutfnj6b0"]
+
+[ext_resource type="Script" path="res://scripts/gui/GlobalUI.gd" id="1_sbwvh"]
+[ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="2_b35vf"]
+[ext_resource type="Texture2D" uid="uid://8c42bcmh1kap" path="res://sprites/GlobalUI/experience.png" id="2_v3sx6"]
+[ext_resource type="Texture2D" uid="uid://cmxbr7d6as3qb" path="res://sprites/GlobalUI/coral.png" id="3_6i316"]
+
+[node name="GlobalUi" type="CanvasLayer"]
+script = ExtResource("1_sbwvh")
+
+[node name="Pearls" type="TextureRect" parent="."]
+z_index = 11
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 59.0
+offset_bottom = 26.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_b35vf")
+
+[node name="Value" type="Label" parent="Pearls"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 60.0
+offset_right = 486.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 100
+text = "333"
+
+[node name="Corals" type="TextureRect" parent="."]
+z_index = 11
+offset_left = 145.0
+offset_top = 2.0
+offset_right = 217.0
+offset_bottom = 36.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_6i316")
+
+[node name="Value" type="Label" parent="Corals"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 50.0
+offset_right = 486.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 100
+text = "333"
+
+[node name="Experience" type="TextureRect" parent="."]
+z_index = 11
+offset_left = 1828.0
+offset_top = 1.0
+offset_right = 2213.0
+offset_bottom = 386.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_v3sx6")
+
+[node name="Value" type="Label" parent="Experience"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 125.0
+offset_right = 193.0
+offset_bottom = 148.0
+theme_override_font_sizes/font_size = 100
+text = "3"

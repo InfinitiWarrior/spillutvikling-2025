@@ -8,10 +8,11 @@ var nodes : Control
 func _ready():
 	camera = get_node("MapCamera")
 	nodes = get_node("Nodes")
-	
+
 	loadMapState()
 
 func _on_level_pressed(node):
+	GlobalUI.visible = false
 	LevelManager.byIndex(node.level).loadScene()
 
 func _process(delta):
