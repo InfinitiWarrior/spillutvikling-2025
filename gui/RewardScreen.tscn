@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbuvehd7yn8pq"]
+[gd_scene load_steps=4 format=3 uid="uid://dbuvehd7yn8pq"]
 
 [ext_resource type="Texture2D" uid="uid://dq66olqbfjeuy" path="res://sprites/test.jpg" id="1_ol457"]
 [ext_resource type="Script" path="res://scripts/gui/RewardScreen.gd" id="1_ycfoe"]
+[ext_resource type="Script" path="res://scripts/gui/newGameButton.gd" id="3_5ctvp"]
 
 [node name="RewardScreen" type="Control"]
 layout_mode = 3
@@ -34,3 +35,16 @@ offset_right = -806.0
 offset_bottom = -638.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "REWARD"
+
+[node name="RewardContinueButton" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 40)
+offset_left = 859.0
+offset_top = 920.0
+offset_right = 1077.0
+offset_bottom = 988.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+script = ExtResource("3_5ctvp")
+
+[connection signal="button_down" from="RewardContinueButton" to="RewardContinueButton" method="_on_button_down"]
