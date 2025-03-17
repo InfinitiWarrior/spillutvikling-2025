@@ -50,3 +50,7 @@ folder_colors={
 "res://scripts/singleton/": "red",
 "res://sprites/": "pink"
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_repeat=1

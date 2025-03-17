@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://sh3dutfnj6b0"]
+[gd_scene load_steps=5 format=3 uid="uid://cifrpu3wq6dqw"]
 
 [ext_resource type="Script" path="res://scripts/gui/GlobalUI.gd" id="1_sbwvh"]
 [ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="2_b35vf"]

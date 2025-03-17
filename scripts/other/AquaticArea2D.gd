@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var root = LevelManager.getCurrentScene()
-var line : Line2D
+@onready var line : Line2D = load("res://scenes/objects/Line.tscn").instantiate()
 var collision_shape : CollisionShape2D
 var is_dragging = false
 var enemy = null
@@ -10,13 +10,12 @@ var enemySelected = false
 func _ready():
 	connectToEnemies()
 	collision_shape = $CollisionShape2D
-	line = Line2D.new()
-	line.width = 2
-	line.default_color = Color.GREEN  # Default color
 	add_child(line)
 	set_process_input(true)
 #
 func _input(event):
+	print(line.get_point_position(0), line.get_point_position(1))
+	var points = line.get_points()
 	if event is InputEventMouseButton and not Global.attacking:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var local_pos = collision_shape.to_local(event.position)
@@ -35,6 +34,7 @@ func _input(event):
 			line.default_color = Color.GREEN
 			
 		else:
+			enemy.drawCircle()
 			line.default_color = Color.RED
 			# Because when the screen changes size, the global position isn't actually changing, so we calculate the new coordinates
 			if not enemySelected:

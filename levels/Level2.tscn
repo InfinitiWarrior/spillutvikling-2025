@@ -9,7 +9,7 @@
 script = ExtResource("3_viqeu")
 pearls = 2
 corals = 2
-experience = 2
+experience = 50
 levelUnlocked = 3
 aquaticUnlocked = ExtResource("2_opglr")
 
@@ -24,6 +24,7 @@ script = ExtResource("1_lyvlc")
 rewards = SubResource("Resource_0oq1o")
 
 [node name="Background" type="TextureRect" parent="."]
+z_index = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

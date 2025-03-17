@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_opb1f"]
 [ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="2_e7acp"]
-[ext_resource type="Texture2D" uid="uid://d12nxgwcaa3bk" path="res://sprites/icon.svg" id="2_r6go6"]
 [ext_resource type="PackedScene" uid="uid://c6hccte4vjfxl" path="res://scenes/enemies/Wizard.tscn" id="3_khcfi"]
+[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="3_rewl3"]
 
 [sub_resource type="Resource" id="Resource_we8cb"]
 script = ExtResource("2_e7acp")
@@ -17,12 +17,13 @@ script = ExtResource("1_opb1f")
 rewards = SubResource("Resource_we8cb")
 
 [node name="Background" type="TextureRect" parent="."]
+z_index = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_r6go6")
+texture = ExtResource("3_rewl3")
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -31,5 +32,5 @@ position = Vector2(1411, 264)
 scale = Vector2(2, 2)
 
 [node name="Wizard2" parent="Enemies" instance=ExtResource("3_khcfi")]
-position = Vector2(1413, 518)
+position = Vector2(1413, 557)
 scale = Vector2(2, 2)

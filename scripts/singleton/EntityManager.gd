@@ -24,7 +24,7 @@ func getAquaticArray():
 	return aquaticArray.array
 
 func getUnlockedAquaticArray():
-	return unlockedAquaticArray.array
+	return unlockedAquaticArray.array 
 
 func getEnemyArray():
 	return enemyArray.array

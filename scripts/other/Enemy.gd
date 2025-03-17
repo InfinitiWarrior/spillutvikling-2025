@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var healthbar : TextureProgressBar
 @onready var animatedSprite = $AnimatedSprite2D
 
+var circle = null
+
 func _ready():
 	healthbar.max_value = enemyStats.maximumHealth
 	healthbar.value = health
@@ -47,3 +49,14 @@ func take_damage(damage):
 	
 	if health <= 0:
 		queue_free()
+
+func drawCircle():
+	if not circle:
+		circle = load("res://scenes/objects/Circle.tscn").instantiate()
+	
+		add_child(circle)
+
+func removeCircle():
+	if circle:
+		get_node("Circle").queue_free()
+		circle = null

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0uunjhdoigsg"]
+
+[ext_resource type="Texture2D" uid="uid://dq6oku1luvrxr" path="res://sprites/circle.png" id="1_e64qc"]
+
+[node name="Circle" type="TextureRect"]
+z_index = -1
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource("1_e64qc")

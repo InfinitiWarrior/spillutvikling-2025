@@ -1,14 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7h2d3m1wnroh"]
+[gd_scene load_steps=5 format=3 uid="uid://b7h2d3m1wnroh"]
 
+[ext_resource type="Texture2D" uid="uid://c6ruel5rk48p7" path="res://sprites/utenknapper.png" id="1_g823l"]
 [ext_resource type="Script" path="res://scripts/gui/loadButton.gd" id="2_nh6ir"]
 [ext_resource type="Script" path="res://scripts/gui/newGameButton.gd" id="3_yuly0"]
 [ext_resource type="Script" path="res://scripts/gui/quitButton.gd" id="4_qvgri"]
-
-[sub_resource type="Gradient" id="Gradient_yoyl7"]
-colors = PackedColorArray(0, 0, 0.329412, 1, 0, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kht0i"]
-gradient = SubResource("Gradient_yoyl7")
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -23,10 +18,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -2.0
+offset_right = 2880.0
+offset_bottom = 1620.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_kht0i")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_g823l")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2px6cf1lrefv"
-path="res://.godot/imported/lockedCircle.png-84cb1aeabda50bdb51b6acdf47bd0686.ctex"
+uid="uid://p1l58sibjpwe"
+path="res://.godot/imported/icon_checkmark.png-de4990679ba5ed30c538b9186570f694.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lockedCircle.png"
-dest_files=["res://.godot/imported/lockedCircle.png-84cb1aeabda50bdb51b6acdf47bd0686.ctex"]
+source_file="res://sprites/UI/icon_checkmark.png"
+dest_files=["res://.godot/imported/icon_checkmark.png-de4990679ba5ed30c538b9186570f694.ctex"]
 
 [params]
 

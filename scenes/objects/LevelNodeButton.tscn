@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cx8gowrvkq0yc"]
 
 [ext_resource type="Script" path="res://scripts/gui/LevelNodeButton.gd" id="1_1wfrc"]
-[ext_resource type="Texture2D" uid="uid://c2px6cf1lrefv" path="res://sprites/lockedCircle.png" id="1_smmxq"]
+[ext_resource type="Texture2D" uid="uid://c2px6cf1lrefv" path="res://sprites/UI/lockedCircle.png" id="1_smmxq"]
 
 [node name="LevelNode" type="TextureButton"]
 offset_right = 40.0

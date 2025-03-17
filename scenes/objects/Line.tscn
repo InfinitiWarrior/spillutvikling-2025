@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cxqj8x5v3rxyd"]
+
+[node name="Line2D" type="Line2D"]
+z_index = -1
+default_color = Color(1, 0.17, 0.17, 1)
+texture_mode = 1

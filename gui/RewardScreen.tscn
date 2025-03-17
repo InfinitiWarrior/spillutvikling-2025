@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbuvehd7yn8pq"]
+[gd_scene load_steps=8 format=3 uid="uid://dbuvehd7yn8pq"]
 
-[ext_resource type="Texture2D" uid="uid://dq66olqbfjeuy" path="res://sprites/test.jpg" id="1_ol457"]
 [ext_resource type="Script" path="res://scripts/gui/RewardScreen.gd" id="1_ycfoe"]
-[ext_resource type="Script" path="res://scripts/gui/RewardContiueButton.gd" id="3_d8w2l"]
+[ext_resource type="Script" path="res://scripts/gui/RewardContinueButton.gd" id="3_d8w2l"]
+[ext_resource type="Texture2D" uid="uid://nescgj54jcp" path="res://sprites/UI/button_rectangle_line.png" id="3_sshqc"]
+[ext_resource type="Texture2D" uid="uid://ccxvkdr0fjj60" path="res://sprites/button_rectangle_depth_border.png" id="4_d8igb"]
+[ext_resource type="Texture2D" uid="uid://dlgv30i0eftcc" path="res://sprites/star.png" id="5_6687c"]
+[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="6_7h6jo"]
+[ext_resource type="Texture2D" uid="uid://p1l58sibjpwe" path="res://sprites/UI/icon_checkmark.png" id="7_pfxmm"]
 
 [node name="RewardScreen" type="Control"]
 layout_mode = 3
@@ -13,39 +17,70 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ycfoe")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -3.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_ol457")
-
-[node name="RewardLabel" type="Label" parent="."]
+[node name="RewardVBox" type="VBoxContainer" parent="."]
 z_index = 1
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 733.0
-offset_top = 379.0
-offset_right = -806.0
-offset_bottom = -638.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "REWARD"
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -198.0
+offset_right = 198.0
+offset_bottom = 334.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="RewardContinueButton" type="Button" parent="."]
-custom_minimum_size = Vector2(0, 40)
+[node name="ButtonRectangleDepthBorder" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(944, 216)
+scale = Vector2(1.60286, 1.63672)
+texture = ExtResource("4_d8igb")
+metadata/_edit_group_ = true
+
+[node name="Star" type="Sprite2D" parent="ButtonRectangleDepthBorder"]
+position = Vector2(-106.684, -4.73508)
+scale = Vector2(0.561098, 0.561098)
+texture = ExtResource("5_6687c")
+
+[node name="Star2" type="Sprite2D" parent="ButtonRectangleDepthBorder"]
+position = Vector2(101.069, -2.29117)
+scale = Vector2(0.561098, 0.561098)
+texture = ExtResource("5_6687c")
+
+[node name="Star3" type="Sprite2D" parent="ButtonRectangleDepthBorder"]
+position = Vector2(-2.49552, -10.2339)
+scale = Vector2(0.561098, 0.561098)
+texture = ExtResource("5_6687c")
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 920.0
-offset_right = 1077.0
-offset_bottom = 988.0
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "Continue"
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_7h6jo")
+
+[node name="ContinueRewardTextureButton" type="TextureButton" parent="."]
+z_index = 20
+layout_mode = 2
+offset_left = 747.0
+offset_top = 906.0
+offset_right = 1131.0
+offset_bottom = 1034.0
+texture_normal = ExtResource("3_sshqc")
+texture_pressed = ExtResource("3_sshqc")
+texture_hover = ExtResource("3_sshqc")
+texture_disabled = ExtResource("3_sshqc")
+texture_focused = ExtResource("3_sshqc")
 script = ExtResource("3_d8w2l")
 
-[connection signal="button_down" from="RewardContinueButton" to="RewardContinueButton" method="_on_button_down"]
+[node name="CheckmarkTexture" type="TextureRect" parent="ContinueRewardTextureButton"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 22.0
+offset_right = 1565.0
+offset_bottom = 726.0
+scale = Vector2(0.058, 0.115)
+texture = ExtResource("7_pfxmm")
+
+[connection signal="button_down" from="ContinueRewardTextureButton" to="ContinueRewardTextureButton" method="_on_button_down"]

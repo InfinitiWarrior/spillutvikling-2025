@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://5j66ees0wgy6"]
+
+[ext_resource type="Texture2D" uid="uid://df7u5w3hwc1qm" path="res://sprites/rectangle.png" id="1_63vbu"]
+[ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="1_fke3i"]
+
+[node name="Reward" type="TextureRect"]
+z_index = 12
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1664.0
+offset_bottom = -989.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_63vbu")
+
+[node name="RewardTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 19.5
+offset_right = 546.0
+offset_bottom = 275.5
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_fke3i")
+
+[node name="RewardLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 28.5
+offset_right = 223.0
+offset_bottom = 97.5
+theme_override_font_sizes/font_size = 40
+text = "Pearls"

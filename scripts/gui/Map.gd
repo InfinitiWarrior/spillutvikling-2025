@@ -28,7 +28,7 @@ func loadMapState():
 		#print(enumerate, levelUnlocked)
 		if enumerate <= levelUnlocked:
 			#print(enumerate, levelUnlocked)
-			node.get_node("Sprite2D").texture = load("res://sprites/unlockedCircle.png")
+			node.get_node("Sprite2D").texture = load("res://sprites/UI/unlockedCircle.png")
 		enumerate += 1
 
 func moveCamera():
