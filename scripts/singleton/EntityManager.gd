@@ -9,7 +9,6 @@ var renderQueue = []
 
 func unlock(aquaticStats : AquaticStats):
 	unlockedAquaticArray.array.append(aquaticStats)
-	print(unlockedAquaticArray.array)
 
 func render(stats):
 	var aquaticScenePath = "res://scenes/aquatics/" + stats + ".tscn"

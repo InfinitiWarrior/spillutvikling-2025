@@ -14,7 +14,6 @@ func _ready():
 	set_process_input(true)
 #
 func _input(event):
-	print(line.get_point_position(0), line.get_point_position(1))
 	var points = line.get_points()
 	if event is InputEventMouseButton and not Global.attacking:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -35,7 +34,7 @@ func _input(event):
 			
 		else:
 			enemy.drawCircle()
-			line.default_color = Color.RED
+			line.default_color = Color("eb4727")
 			# Because when the screen changes size, the global position isn't actually changing, so we calculate the new coordinates
 			if not enemySelected:
 				Input.warp_mouse(get_viewport().get_screen_transform().origin + get_viewport().get_screen_transform().basis_xform(enemy.global_position))

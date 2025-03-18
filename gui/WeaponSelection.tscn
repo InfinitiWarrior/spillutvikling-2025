@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://bth7njj7hbho2"]
+
+[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="1_7n688"]
+[ext_resource type="Texture2D" uid="uid://c5xyslmymo0bg" path="res://sprites/UI/Selection/button_square_depth_border.png" id="2_0n7ym"]
+[ext_resource type="Texture2D" uid="uid://bkjekkbfoyqwf" path="res://sprites/UI/Selection/arrow_basic_e.png" id="3_aw4h1"]
+[ext_resource type="Texture2D" uid="uid://c0bbty60alh2t" path="res://sprites/UI/Selection/arrow_basic_w.png" id="4_anmb6"]
+[ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="5_4sg8h"]
+
+[sub_resource type="Gradient" id="Gradient_xxpgl"]
+colors = PackedColorArray(0.339095, 0.693429, 0.916398, 1, 0.337255, 0.694118, 0.917647, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fdahb"]
+gradient = SubResource("Gradient_xxpgl")
+
+[node name="WeaponSelection" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7n688")
+
+[node name="Weapons" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 632.0
+offset_right = 1891.0
+offset_bottom = 1035.0
+texture = SubResource("GradientTexture2D_fdahb")
+
+[node name="GridContainer" type="GridContainer" parent="Weapons"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 1863.0
+offset_bottom = 401.0
+columns = 14
+
+[node name="TextureRect" type="TextureRect" parent="Weapons/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_0n7ym")
+stretch_mode = 4
+
+[node name="ArrowRight" type="TextureRect" parent="."]
+offset_left = 1008.0
+offset_top = 529.0
+offset_right = 1072.0
+offset_bottom = 593.0
+texture = ExtResource("3_aw4h1")
+stretch_mode = 4
+
+[node name="ArrowLeft" type="TextureRect" parent="."]
+offset_left = 759.0
+offset_top = 527.0
+offset_right = 823.0
+offset_bottom = 591.0
+texture = ExtResource("4_anmb6")
+stretch_mode = 4
+
+[node name="Aquatic" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 425.0
+offset_right = 1014.0
+offset_bottom = 617.0
+texture = ExtResource("5_4sg8h")

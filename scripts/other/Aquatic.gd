@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite2D
 @export var healthbar : TextureProgressBar
 
+var weapon = null
+
 var turnReady = true
 
 func _ready():

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c65blcpis4g4f"
-path="res://.godot/imported/slide_horizontal_color.png-78e6f4e49e9b399305ab35af6da230fb.ctex"
+uid="uid://c0bbty60alh2t"
+path="res://.godot/imported/arrow_basic_w.png-5065f4563c25b67e9231b1d67489796c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slide_horizontal_color.png"
-dest_files=["res://.godot/imported/slide_horizontal_color.png-78e6f4e49e9b399305ab35af6da230fb.ctex"]
+source_file="res://sprites/UI/Selection/arrow_basic_w.png"
+dest_files=["res://.godot/imported/arrow_basic_w.png-5065f4563c25b67e9231b1d67489796c.ctex"]
 
 [params]
 
