@@ -62,12 +62,14 @@ func _input(event):
 		get_parent().turnReady = false
 		enemySelected = false
 		get_parent().attack(enemy)
+		enemy = null
 
 	if not is_dragging and aquaticSelected:
 		print("tets")
 		get_parent().turnReady = false
 		aquaticSelected = false
 		get_parent().Support(aquatic)
+		aquatic = null
 
 func connectToEnemies():
 	for enemy in root.enemies:
