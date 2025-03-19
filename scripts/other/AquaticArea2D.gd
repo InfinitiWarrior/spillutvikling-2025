@@ -36,6 +36,8 @@ func _input(event):
 	if is_dragging and get_parent().turnReady:
 		line.clear_points()
 		line.add_point(position)
+		print(aquatic)
+		print(enemy)
 
 		if not enemy:
 			enemySelected = false
@@ -49,11 +51,18 @@ func _input(event):
 			if not enemySelected:
 				Input.warp_mouse(get_viewport().get_screen_transform().origin + get_viewport().get_screen_transform().basis_xform(enemy.global_position))
 				enemySelected = true
+				
+				aquatic = null
+				aquaticSelected = false
+				
 		if not aquatic:
 			aquaticSelected = false
 			aquatic = null
 		else:
 			aquaticSelected = true
+			
+			enemy = null
+			enemySelected = false
 		
 		line.add_point(get_local_mouse_position())
 		
@@ -85,15 +94,8 @@ func connectToAquatics():
 func _on_mouse_entered():
 	emit_signal("mouse_hover_self", self)
 
-func _on_mouse_exited():
-	aquatic = null
-	print("mouse exited player area")
-	print(aquatic)
-	get_parent().target = null
-
 func _on_enemy_hover(enemyObj):
 	enemy = enemyObj
 
 func _on_aquatic_hover(aquaticObj):
 	aquatic = aquaticObj
-	print(aquatic)
