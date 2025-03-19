@@ -25,3 +25,6 @@ func getLevel(xp: int) -> int:
 		xp -= requiredXP(level)
 		level += 1
 	return level
+	
+func getLevelValue():
+	return getLevel(PlayerManager.playerStats.experience)

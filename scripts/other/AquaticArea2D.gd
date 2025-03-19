@@ -36,8 +36,6 @@ func _input(event):
 	if is_dragging and get_parent().turnReady:
 		line.clear_points()
 		line.add_point(position)
-		print(aquatic)
-		print(enemy)
 
 		if not enemy:
 			enemySelected = false
