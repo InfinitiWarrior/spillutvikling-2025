@@ -1,9 +1,15 @@
 extends Node
 
-var weapons = load("res://base/Weapons/Weapons.tres")
-
-func _ready():
-	pass
+@onready var weapons = load("res://base/Weapons/Weapons.tres")
 
 func getWeapons():
-	print(weapons.array[0].unlocked)
+	return weapons.array
+
+func byId(id : int) -> Weapon:
+	for weapon in getWeapons():
+		if weapon.id == id:
+			return weapon
+	return null
+
+func unlock(weapon : Weapon):
+	weapon.unlocked = true

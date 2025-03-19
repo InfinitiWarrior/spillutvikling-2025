@@ -14,3 +14,8 @@ func Map():
 func RewardScreen():
 	GlobalUI.visible = true
 	loadScene("res://gui/RewardScreen.tscn")
+
+func WeaponSelect():
+	GlobalUI.visible = true
+	SaveManager.loadSave()
+	loadScene("res://gui/WeaponSelection.tscn")

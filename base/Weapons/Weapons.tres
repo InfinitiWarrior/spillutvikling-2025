@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Weapons" load_steps=4 format=3 uid="uid://cd2uhjmrx75sk"]
+[gd_resource type="Resource" script_class="Weapons" load_steps=5 format=3 uid="uid://cd2uhjmrx75sk"]
 
 [ext_resource type="Script" path="res://scripts/customResources/Weapons.gd" id="1_tebic"]
 [ext_resource type="Script" path="res://scripts/customResources/Weapon.gd" id="2_557ha"]
 [ext_resource type="Resource" uid="uid://bujuo4jy8tkog" path="res://base/Weapons/Basic Sword.tres" id="3_jr0mj"]
+[ext_resource type="Resource" uid="uid://cndcpiru15yh7" path="res://base/Weapons/Silver Sword.tres" id="3_yuqog"]
 
 [resource]
 script = ExtResource("1_tebic")
-array = Array[ExtResource("2_557ha")]([ExtResource("3_jr0mj")])
+array = Array[ExtResource("2_557ha")]([ExtResource("3_jr0mj"), ExtResource("3_yuqog")])

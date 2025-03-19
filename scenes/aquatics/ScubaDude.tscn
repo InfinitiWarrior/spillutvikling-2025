@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=3 uid="uid://rmebys7qwoe2"]
+
+[ext_resource type="Script" path="res://scripts/other/Aquatic.gd" id="1_kocvn"]
+[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_r1ocn"]
+[ext_resource type="Texture2D" uid="uid://ckbchuvwnueb2" path="res://sprites/IdleScubaDudeSeq.png" id="3_krlx6"]
+[ext_resource type="Script" path="res://scripts/other/AquaticArea2D.gd" id="4_ol7t5"]
+[ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_277iu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m55w"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 0, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faiq5"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 1200, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kos2j"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 2400, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dka1i"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 3600, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj8ej"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 4800, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqh1g"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 6000, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa21j"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 7200, 1200, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ck2b"]
+atlas = ExtResource("3_krlx6")
+region = Rect2(0, 8400, 1200, 1200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8vgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m55w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faiq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kos2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dka1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj8ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqh1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa21j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ck2b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 25.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hu74m"]
+radius = 10.1667
+height = 31.6667
+
+[node name="Axolotl" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_kocvn")
+aquaticStats = ExtResource("2_r1ocn")
+healthbar = NodePath("Healthbar")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(12.6667, 2)
+scale = Vector2(0.116944, 0.116944)
+sprite_frames = SubResource("SpriteFrames_i8vgo")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+script = ExtResource("4_ol7t5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.666667)
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_hu74m")
+
+[node name="Healthbar" parent="." instance=ExtResource("5_277iu")]
+offset_left = -32.0
+offset_top = 60.0
+offset_right = 32.0
+offset_bottom = 70.0
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

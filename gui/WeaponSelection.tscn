@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dl6gc7tjch2ho"]
+[gd_scene load_steps=8 format=3 uid="uid://dl6gc7tjch2ho"]
 
 [ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="1_7n688"]
-[ext_resource type="Script" path="res://gui/WeaponSelection.gd" id="2_c7qcx"]
-[ext_resource type="PackedScene" uid="uid://dfcymg0setph4" path="res://scenes/objects/ItemDisplay.tscn" id="3_5sgi3"]
+[ext_resource type="Script" path="res://scripts/gui/WeaponSelection.gd" id="2_c7qcx"]
 [ext_resource type="Texture2D" uid="uid://bkjekkbfoyqwf" path="res://sprites/UI/Selection/arrow_basic_e.png" id="3_aw4h1"]
 [ext_resource type="Texture2D" uid="uid://c0bbty60alh2t" path="res://sprites/UI/Selection/arrow_basic_w.png" id="4_anmb6"]
 [ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="5_4sg8h"]
@@ -37,9 +36,6 @@ offset_top = 9.0
 offset_right = 1863.0
 offset_bottom = 401.0
 columns = 14
-
-[node name="ItemHolder" parent="Weapons/GridContainer" instance=ExtResource("3_5sgi3")]
-layout_mode = 2
 
 [node name="ArrowRight" type="TextureRect" parent="."]
 layout_mode = 0

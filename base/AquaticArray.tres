@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="AquaticArray" load_steps=4 format=3 uid="uid://b0qfmie6yr1eq"]
+[gd_resource type="Resource" script_class="AquaticArray" load_steps=5 format=3 uid="uid://b0qfmie6yr1eq"]
 
 [ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="1_ry436"]
 [ext_resource type="Script" path="res://scripts/customResources/AquaticArray.gd" id="2_60vrh"]
 [ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_v6he0"]
+[ext_resource type="Resource" uid="uid://csr78bybx65uk" path="res://resources/stats/aquatic/ScubaDude.tres" id="3_n4h2f"]
 
 [resource]
 script = ExtResource("2_60vrh")
-array = Array[ExtResource("1_ry436")]([ExtResource("2_v6he0")])
+array = Array[ExtResource("1_ry436")]([ExtResource("2_v6he0"), ExtResource("3_n4h2f")])
