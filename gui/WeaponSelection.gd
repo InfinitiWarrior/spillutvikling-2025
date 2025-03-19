@@ -8,4 +8,4 @@ func _ready():
 	var grids = gridContainer.get_children()
 	
 	for grid in grids:
-		print("test")
+		print(grid)
