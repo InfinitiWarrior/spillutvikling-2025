@@ -64,7 +64,7 @@ func take_damage(damage):
 		queue_free()
 
 func buff_someone(target):
-	target.buffTarget(10)
+	target.get_parent().buffTarget(10)
 
 func buffTarget(buff):
 	print("Healed ", buff, " health")

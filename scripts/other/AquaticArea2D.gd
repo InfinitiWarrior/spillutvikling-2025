@@ -50,7 +50,9 @@ func _input(event):
 				Input.warp_mouse(get_viewport().get_screen_transform().origin + get_viewport().get_screen_transform().basis_xform(enemy.global_position))
 				enemySelected = true
 		if not aquatic:
-			pass
+			aquaticSelected = false
+		else:
+			aquaticSelected = true
 		
 		line.add_point(get_local_mouse_position())
 		
@@ -63,6 +65,7 @@ func _input(event):
 		get_parent().attack(enemy)
 
 	if not is_dragging and aquaticSelected:
+		print("tets")
 		get_parent().turnReady = false
 		aquaticSelected = false
 		get_parent().Support(aquatic)
@@ -85,6 +88,5 @@ func _on_enemy_hover(enemyObj):
 	enemy = enemyObj
 
 func _on_aquatic_hover(aquaticObj):
-	print("HOVERED")
 	aquatic = aquaticObj
 	print(aquatic)
