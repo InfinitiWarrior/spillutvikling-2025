@@ -25,9 +25,7 @@ func loadMapState():
 	for node in nodes.get_children():
 		node.connect("level_pressed", Callable(self, "_on_level_pressed"))
 		
-		#print(enumerate, levelUnlocked)
 		if enumerate <= levelUnlocked:
-			#print(enumerate, levelUnlocked)
 			node.get_node("Sprite2D").texture = load("res://sprites/UI/unlockedCircle.png")
 		enumerate += 1
 

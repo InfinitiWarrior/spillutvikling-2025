@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bth7njj7hbho2"]
+[gd_scene load_steps=9 format=3 uid="uid://dl6gc7tjch2ho"]
 
 [ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="1_7n688"]
-[ext_resource type="Texture2D" uid="uid://c5xyslmymo0bg" path="res://sprites/UI/Selection/button_square_depth_border.png" id="2_0n7ym"]
+[ext_resource type="Script" path="res://gui/WeaponSelection.gd" id="2_c7qcx"]
+[ext_resource type="PackedScene" uid="uid://dfcymg0setph4" path="res://scenes/objects/ItemDisplay.tscn" id="3_5sgi3"]
 [ext_resource type="Texture2D" uid="uid://bkjekkbfoyqwf" path="res://sprites/UI/Selection/arrow_basic_e.png" id="3_aw4h1"]
 [ext_resource type="Texture2D" uid="uid://c0bbty60alh2t" path="res://sprites/UI/Selection/arrow_basic_w.png" id="4_anmb6"]
 [ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="5_4sg8h"]
@@ -19,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7n688")
+script = ExtResource("2_c7qcx")
 
 [node name="Weapons" type="TextureRect" parent="."]
 layout_mode = 0
@@ -36,12 +38,11 @@ offset_right = 1863.0
 offset_bottom = 401.0
 columns = 14
 
-[node name="TextureRect" type="TextureRect" parent="Weapons/GridContainer"]
+[node name="ItemHolder" parent="Weapons/GridContainer" instance=ExtResource("3_5sgi3")]
 layout_mode = 2
-texture = ExtResource("2_0n7ym")
-stretch_mode = 4
 
 [node name="ArrowRight" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 1008.0
 offset_top = 529.0
 offset_right = 1072.0
@@ -50,6 +51,7 @@ texture = ExtResource("3_aw4h1")
 stretch_mode = 4
 
 [node name="ArrowLeft" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 759.0
 offset_top = 527.0
 offset_right = 823.0
