@@ -31,6 +31,9 @@ func idle_animate():
 func attack(target):
 	move_to_and_back(target, func(): deal_damage(target))
 
+func Support(target):
+	move_to_and_back(target, func(): buff_someone(target))
+
 func move_to_and_back(target, onHit : Callable):
 	Global.attacking = true
 	var startingPos = global_position # Saving the starting position so that the return tween knows where to go, because normally it is queued, so you could use position, but since the tween is created on completion of the first tween, global_position is where it ended, not started
@@ -61,3 +64,12 @@ func take_damage(damage):
 	
 	if health <= 0:
 		queue_free()
+
+func buff_someone(target):
+	target.get_parent().buffTarget(10)
+
+func buffTarget(buff):
+	print("Healed ", buff, " health")
+	health += buff
+	print(health)
+	healthbar.value = health

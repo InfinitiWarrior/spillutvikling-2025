@@ -10,6 +10,7 @@ func _ready():
 func _on_mouse_entered():
 	emit_signal("mouse_hover", self.get_parent())
 
+
 func _on_mouse_exited():
 	get_parent().removeCircle()
 	emit_signal("mouse_hover", null)
