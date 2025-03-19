@@ -2,15 +2,16 @@ class_name Aquatic
 extends CharacterBody2D
 
 @export var aquaticStats : AquaticStats
-@onready var health = (aquaticStats.maximumHealth + (GlobalUI.getLevelValue() * 10))
 @onready var animatedSprite = $AnimatedSprite2D
 @export var healthbar : TextureProgressBar
-
-var weapon = null
+var health
 
 var turnReady = true
 
 func _ready():
+	aquaticStats = EntityManager.getUnlockedAquatic(aquaticStats.id)
+	health = (aquaticStats.maximumHealth + (GlobalUI.getLevelValue() * 10))
+	
 	healthbar.max_value = health
 	healthbar.value = health
 	idle_animate()
@@ -29,9 +30,11 @@ func idle_animate():
 	animatedSprite.play("idle")
 
 func attack(target):
+	print("Attack: ", target)
 	move_to_and_back(target, func(): deal_damage(target))
 
 func Support(target):
+	print("Support: ", target)
 	move_to_and_back(target, func(): buff_someone(target))
 
 func move_to_and_back(target, onHit : Callable):
@@ -66,7 +69,7 @@ func take_damage(damage):
 		queue_free()
 
 func buff_someone(target):
-	target.get_parent().buffTarget(10)
+	target.buffTarget(10)
 
 func buffTarget(buff):
 	print("Healed ", buff, " health")

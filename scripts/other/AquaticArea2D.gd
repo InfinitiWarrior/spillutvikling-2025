@@ -15,12 +15,12 @@ var aquaticSelected = false
 
 func _ready():
 	connectToEnemies()
-	connectToAquatics()
 	collision_shape = $CollisionShape2D
 	add_child(line)
 	set_process_input(true)
 	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
+	connect("mouse_hover_self", Callable(self, "_on_aquatic_hover"))
 
 func _input(event):
 	var points = line.get_points()
@@ -70,12 +70,14 @@ func _input(event):
 	if not is_dragging and enemySelected:
 		get_parent().turnReady = false
 		enemySelected = false
+		#print("enemy ", enemy)
 		get_parent().attack(enemy)
 		enemy = null
 
 	if not is_dragging and aquaticSelected:
 		get_parent().turnReady = false
 		aquaticSelected = false
+		#print("aquatic ", aquatic)
 		get_parent().Support(aquatic)
 		aquatic = null
 
@@ -84,16 +86,12 @@ func connectToEnemies():
 		var area = enemy.get_node("Area2D")
 		area.connect("mouse_hover", Callable(self, "_on_enemy_hover"))
 
-func connectToAquatics():
-	for aquatic in EntityManager.renderQueue:
-		var area = aquatic.get_node("Area2D")
-		area.connect("mouse_hover_self", Callable(self, "_on_aquatic_hover"))
-
 func _on_mouse_entered():
-	emit_signal("mouse_hover_self", self)
+	emit_signal("mouse_hover_self", self.get_parent())
 
 func _on_enemy_hover(enemyObj):
 	enemy = enemyObj
 
 func _on_aquatic_hover(aquaticObj):
+	print("Aquatic Hover", aquaticObj)
 	aquatic = aquaticObj
