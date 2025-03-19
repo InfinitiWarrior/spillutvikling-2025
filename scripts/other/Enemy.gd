@@ -42,8 +42,8 @@ func deal_damage(target):
 	target.take_damage(enemyStats.power)
 
 func take_damage(damage):
-	print("Took ", damage, " damage")
-	health -= damage
+	print("Took ", (damage - enemyStats.defense), " damage")
+	health -= damage - enemyStats.defense
 	print(health)
 	healthbar.value = health
 	

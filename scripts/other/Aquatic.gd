@@ -2,7 +2,7 @@ class_name Aquatic
 extends CharacterBody2D
 
 @export var aquaticStats : AquaticStats
-@onready var health = aquaticStats.maximumHealth
+@onready var health = (aquaticStats.maximumHealth + (GlobalUI.getLevelValue() * 10))
 @onready var animatedSprite = $AnimatedSprite2D
 @export var healthbar : TextureProgressBar
 
@@ -57,8 +57,8 @@ func deal_damage(target):
 	target.take_damage(aquaticStats.power)
 
 func take_damage(damage):
-	print("Took ", damage, " damage")
-	health -= damage
+	print("Took ", (damage - aquaticStats.defense), " damage")
+	health -= (damage - aquaticStats.defense) 
 	print(health)
 	healthbar.value = health
 	

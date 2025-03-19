@@ -40,6 +40,7 @@ func _input(event):
 		if not enemy:
 			enemySelected = false
 			line.default_color = Color.GREEN
+			enemy = null
 			
 		else:
 			enemy.drawCircle()
@@ -48,10 +49,18 @@ func _input(event):
 			if not enemySelected:
 				Input.warp_mouse(get_viewport().get_screen_transform().origin + get_viewport().get_screen_transform().basis_xform(enemy.global_position))
 				enemySelected = true
+				
+				aquatic = null
+				aquaticSelected = false
+				
 		if not aquatic:
 			aquaticSelected = false
+			aquatic = null
 		else:
 			aquaticSelected = true
+			
+			enemy = null
+			enemySelected = false
 		
 		line.add_point(get_local_mouse_position())
 		
@@ -65,7 +74,6 @@ func _input(event):
 		enemy = null
 
 	if not is_dragging and aquaticSelected:
-		print("tets")
 		get_parent().turnReady = false
 		aquaticSelected = false
 		get_parent().Support(aquatic)
@@ -84,10 +92,8 @@ func connectToAquatics():
 func _on_mouse_entered():
 	emit_signal("mouse_hover_self", self)
 
-
 func _on_enemy_hover(enemyObj):
 	enemy = enemyObj
 
 func _on_aquatic_hover(aquaticObj):
 	aquatic = aquaticObj
-	print(aquatic)
