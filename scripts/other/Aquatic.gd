@@ -58,7 +58,7 @@ func deal_damage(target):
 
 func take_damage(damage):
 	print("Took ", (damage - aquaticStats.defense), " damage")
-	health -= (damage - aquaticStats.defense) 
+	health -= (damage - aquaticStats.defense)
 	print(health)
 	healthbar.value = health
 	
@@ -71,6 +71,6 @@ func buff_someone(target):
 func buffTarget(buff):
 	print("Healed ", buff, " health")
 	health += buff
-	health = aquaticStats.maximumHealth if health > aquaticStats.maximumHealth else health
+	health = (aquaticStats.maximumHealth + (GlobalUI.getLevelValue() * 10)) if health > (aquaticStats.maximumHealth + (GlobalUI.getLevelValue() * 10)) else health
 	print(health)
 	healthbar.value = health

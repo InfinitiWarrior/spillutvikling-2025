@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://da0i3fftlf5t6"]
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://b0pyabqh70xty"]
 
 [ext_resource type="Script" path="res://scripts/customResources/EnemyStats.gd" id="1_k5mxs"]
 
@@ -6,7 +6,7 @@
 script = ExtResource("1_k5mxs")
 id = 0
 name = ""
-maximumHealth = 250
+maximumHealth = 500
 power = 43
 defense = 3
 abilityName = ""
