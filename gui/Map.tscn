@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://p7eq53u6ie00"]
+[gd_scene load_steps=7 format=3 uid="uid://p7eq53u6ie00"]
 
 [ext_resource type="Script" path="res://scripts/gui/Map.gd" id="1_dft7m"]
 [ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LevelNodeButton.tscn" id="2_58a1p"]
 [ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="3_qcbeh"]
+[ext_resource type="Script" path="res://scripts/gui/WeaponSelectButton.gd" id="4_0lt8s"]
+[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/button_square_gradient.png" id="4_ridqm"]
+[ext_resource type="Texture2D" uid="uid://bh52ec7ay453x" path="res://sprites/swordBronze.png" id="6_4y5t2"]
 
 [node name="Map" type="Control"]
 layout_mode = 3
@@ -53,3 +56,25 @@ offset_top = 267.0
 offset_right = 896.0
 offset_bottom = 307.0
 level = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WeaponSelectButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1782.0
+offset_top = 939.0
+offset_right = 1910.0
+offset_bottom = 1067.0
+texture_normal = ExtResource("4_ridqm")
+script = ExtResource("4_0lt8s")
+
+[node name="WeaponTexture" type="TextureRect" parent="CanvasLayer/WeaponSelectButton"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -12.0
+offset_right = 137.0
+offset_bottom = 58.0
+rotation = 0.785398
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_4y5t2")
+
+[connection signal="button_up" from="CanvasLayer/WeaponSelectButton" to="CanvasLayer/WeaponSelectButton" method="_on_button_up"]
