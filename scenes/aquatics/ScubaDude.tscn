@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://rmebys7qwoe2"]
 
 [ext_resource type="Script" path="res://scripts/other/Aquatic.gd" id="1_kocvn"]
-[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="2_r1ocn"]
+[ext_resource type="Resource" uid="uid://csr78bybx65uk" path="res://resources/stats/aquatic/ScubaDude.tres" id="2_f1d0r"]
 [ext_resource type="Texture2D" uid="uid://ckbchuvwnueb2" path="res://sprites/IdleScubaDudeSeq.png" id="3_krlx6"]
 [ext_resource type="Script" path="res://scripts/other/AquaticArea2D.gd" id="4_ol7t5"]
 [ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_277iu"]
@@ -74,10 +74,10 @@ animations = [{
 radius = 10.1667
 height = 31.6667
 
-[node name="Axolotl" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
+[node name="ScubaDude" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_kocvn")
-aquaticStats = ExtResource("2_r1ocn")
+aquaticStats = ExtResource("2_f1d0r")
 healthbar = NodePath("Healthbar")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

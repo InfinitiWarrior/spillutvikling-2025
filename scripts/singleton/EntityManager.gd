@@ -33,6 +33,11 @@ func getAquatic(id : int):
 		if aquaticEntity.id == id:
 			return aquaticEntity
 
+func getUnlockedAquatic(id : int):
+	for unlockedAquaticEntity in getUnlockedAquaticArray():
+		if unlockedAquaticEntity.id == id:
+			return unlockedAquaticEntity
+
 func getEnemy(id : int):
 	for enemyEntity in getEnemyArray():
 		if enemyEntity.id == id:

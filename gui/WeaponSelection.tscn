@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dl6gc7tjch2ho"]
+[gd_scene load_steps=10 format=3 uid="uid://dl6gc7tjch2ho"]
 
 [ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="1_7n688"]
 [ext_resource type="Script" path="res://scripts/gui/WeaponSelection.gd" id="2_c7qcx"]
@@ -12,21 +12,40 @@ colors = PackedColorArray(0.339095, 0.693429, 0.916398, 1, 0.337255, 0.694118, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fdahb"]
 gradient = SubResource("Gradient_xxpgl")
 
-[node name="WeaponSelection" type="TextureRect"]
+[sub_resource type="Gradient" id="Gradient_pxuyf"]
+colors = PackedColorArray(0.169123, 0.526921, 0.733045, 1, 0.168627, 0.52549, 0.733333, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sohxm"]
+gradient = SubResource("Gradient_pxuyf")
+
+[node name="WeaponSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_c7qcx")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 1876.0
+offset_bottom = 1040.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7n688")
-script = ExtResource("2_c7qcx")
 
 [node name="Weapons" type="TextureRect" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 27.0
-offset_top = 632.0
-offset_right = 1891.0
-offset_bottom = 1035.0
+offset_left = 25.0
+offset_top = 653.0
+offset_right = 1889.0
+offset_bottom = 1056.0
 texture = SubResource("GradientTexture2D_fdahb")
 
 [node name="GridContainer" type="GridContainer" parent="Weapons"]
@@ -37,28 +56,50 @@ offset_right = 1863.0
 offset_bottom = 401.0
 columns = 14
 
-[node name="ArrowRight" type="TextureRect" parent="."]
+[node name="ArrowRight" type="TextureButton" parent="."]
+z_index = 10
 layout_mode = 0
-offset_left = 1008.0
-offset_top = 529.0
-offset_right = 1072.0
-offset_bottom = 593.0
-texture = ExtResource("3_aw4h1")
+offset_left = 1006.0
+offset_top = 550.0
+offset_right = 1070.0
+offset_bottom = 614.0
+texture_normal = ExtResource("3_aw4h1")
 stretch_mode = 4
 
-[node name="ArrowLeft" type="TextureRect" parent="."]
+[node name="ArrowLeft" type="TextureButton" parent="."]
+z_index = 10
 layout_mode = 0
-offset_left = 759.0
-offset_top = 527.0
-offset_right = 823.0
-offset_bottom = 591.0
-texture = ExtResource("4_anmb6")
+offset_left = 757.0
+offset_top = 548.0
+offset_right = 821.0
+offset_bottom = 612.0
+texture_normal = ExtResource("4_anmb6")
 stretch_mode = 4
 
-[node name="Aquatic" type="TextureRect" parent="."]
+[node name="AquaticHolder" type="NinePatchRect" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 822.0
-offset_top = 425.0
-offset_right = 1014.0
-offset_bottom = 617.0
+offset_left = 829.0
+offset_top = 471.0
+offset_right = 999.0
+offset_bottom = 646.0
 texture = ExtResource("5_4sg8h")
+
+[node name="EquippedItems" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 506.0
+offset_right = 260.0
+offset_bottom = 641.0
+texture = SubResource("GradientTexture2D_sohxm")
+
+[node name="ItemHolder" type="NinePatchRect" parent="EquippedItems"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 128.0
+offset_bottom = 131.0
+
+[connection signal="button_down" from="ArrowRight" to="." method="_on_arrow_right_button_down"]
+[connection signal="pressed" from="ArrowRight" to="." method="_on_arrow_right_pressed"]
+[connection signal="button_down" from="ArrowLeft" to="." method="_on_arrow_left_button_down"]

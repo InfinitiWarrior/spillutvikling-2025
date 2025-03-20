@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://i3xysg5khdp6"]
+
+[ext_resource type="Script" path="res://scripts/customResources/Weapon.gd" id="1_jk7j2"]
+[ext_resource type="Texture2D" uid="uid://d3vdf8joygcvc" path="res://sprites/swordGold.png" id="2_bmep8"]
+
+[resource]
+script = ExtResource("1_jk7j2")
+id = 3
+name = "Gold Sword"
+power = 11
+aquaticOwner = 1
+unlocked = false
+texture = ExtResource("2_bmep8")

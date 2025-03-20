@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://bujuo4jy8tkog"]
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://bujuo4jy8tkog"]
 
-[ext_resource type="Resource" uid="uid://ddhgiritwoprk" path="res://resources/stats/aquatic/Axolotl.tres" id="1_rkat0"]
 [ext_resource type="Script" path="res://scripts/customResources/Weapon.gd" id="1_sb2qx"]
 [ext_resource type="Texture2D" uid="uid://bh52ec7ay453x" path="res://sprites/swordBronze.png" id="3_geked"]
 
@@ -9,6 +8,6 @@ script = ExtResource("1_sb2qx")
 id = 1
 name = "Basic Sword"
 power = 10
-aquaticOwner = ExtResource("1_rkat0")
+aquaticOwner = 2
 unlocked = false
 texture = ExtResource("3_geked")
