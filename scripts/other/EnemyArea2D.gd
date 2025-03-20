@@ -2,6 +2,8 @@ extends Area2D
 
 signal mouse_hover
 
+var mouse_hovering = false
+
 func _ready():
 	# Connect the signals to the corresponding functions
 	connect("mouse_entered", Callable(self, "_on_mouse_entered"))

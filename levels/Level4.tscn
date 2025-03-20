@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf38g64rnto1y"]
+
+[ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_k6twp"]
+[ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="3_pnug5"]
+[ext_resource type="PackedScene" uid="uid://cnbabgj1pupmh" path="res://scenes/enemies/Tank.tscn" id="3_t3q6e"]
+
+[sub_resource type="Resource" id="Resource_qo6vd"]
+script = ExtResource("3_pnug5")
+pearls = 5
+corals = 5
+experience = 125
+levelUnlocked = 5
+
+[sub_resource type="Gradient" id="Gradient_g7g8o"]
+colors = PackedColorArray(0.372749, 0.80156, 0.918178, 0.760784, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j7peu"]
+gradient = SubResource("Gradient_g7g8o")
+
+[node name="Level2" type="Node"]
+script = ExtResource("1_k6twp")
+rewards = SubResource("Resource_qo6vd")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_j7peu")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="glass-cannon" parent="." instance=ExtResource("3_t3q6e")]
+position = Vector2(1427, 386)
+
+[node name="glass-cannon2" parent="." instance=ExtResource("3_t3q6e")]
+position = Vector2(1424, 637)

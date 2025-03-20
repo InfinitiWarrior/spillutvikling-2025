@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://dh0saof52ubjb"]
+
+[ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_wvhqr"]
+[ext_resource type="Resource" uid="uid://da0i3fftlf5t6" path="res://resources/stats/enemy/miniboss.tres" id="2_tj6mm"]
+[ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="3_xcdvo"]
+[ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_cnwes"]
+[ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_w2rvd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(0, 240, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h8w8"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(0, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk6jr"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(78, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3147v"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(156, 160, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0jts"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(156, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33bb6"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(78, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw74h"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(0, 80, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwck"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(0, 0, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ii5v"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(78, 0, 78, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxya3"]
+atlas = ExtResource("3_xcdvo")
+region = Rect2(156, 0, 78, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idoj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h36af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h8w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk6jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3147v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0jts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33bb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw74h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ii5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxya3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnvtc"]
+radius = 25.0
+height = 82.0
+
+[node name="miniboss" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
+script = ExtResource("1_wvhqr")
+enemyStats = ExtResource("2_tj6mm")
+healthbar = NodePath("Healthbar")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.90735e-06, 2.86102e-06)
+scale = Vector2(1.40705, 1.40705)
+sprite_frames = SubResource("SpriteFrames_idoj6")
+animation = &"idle"
+frame_progress = 0.324581
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_cnwes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_lnvtc")
+
+[node name="Healthbar" parent="." instance=ExtResource("5_w2rvd")]
+offset_left = -32.0
+offset_top = 41.0
+offset_right = 32.0
+offset_bottom = 51.0
