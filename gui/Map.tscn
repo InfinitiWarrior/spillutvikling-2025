@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/other/MapCamera.gd" id="2_2repr"]
 [ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LevelNodeButton.tscn" id="2_58a1p"]
 [ext_resource type="Script" path="res://scripts/gui/WeaponSelectButton.gd" id="4_0lt8s"]
-[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/button_square_gradient.png" id="4_ridqm"]
+[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/UI/button_square_gradient.png" id="4_ridqm"]
 [ext_resource type="Texture2D" uid="uid://bh52ec7ay453x" path="res://sprites/swordBronze.png" id="6_4y5t2"]
 
 [sub_resource type="Gradient" id="Gradient_8mjph"]
@@ -65,6 +65,7 @@ offset_bottom = 327.0
 level = 3
 
 [node name="LevelNode4" parent="Nodes" instance=ExtResource("2_58a1p")]
+layout_mode = 0
 offset_left = 1420.0
 offset_top = 212.0
 offset_right = 1460.0
@@ -72,6 +73,7 @@ offset_bottom = 252.0
 level = 4
 
 [node name="LevelNode5" parent="Nodes" instance=ExtResource("2_58a1p")]
+layout_mode = 0
 offset_left = 2121.0
 offset_top = 445.0
 offset_right = 2161.0

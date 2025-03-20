@@ -39,6 +39,7 @@ func move_to_and_back(target, onHit : Callable):
 	)
 
 func deal_damage(target):
+	SoundManager.swish()
 	target.take_damage(enemyStats.power)
 
 func take_damage(damage):

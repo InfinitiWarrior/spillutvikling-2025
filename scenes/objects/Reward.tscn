@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5j66ees0wgy6"]
 
-[ext_resource type="Texture2D" uid="uid://df7u5w3hwc1qm" path="res://sprites/rectangle.png" id="1_63vbu"]
+[ext_resource type="Texture2D" uid="uid://df7u5w3hwc1qm" path="res://sprites/UI/rectangle.png" id="1_63vbu"]
 [ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="1_fke3i"]
 
 [node name="Reward" type="TextureRect"]

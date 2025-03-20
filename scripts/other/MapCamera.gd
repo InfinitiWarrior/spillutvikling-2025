@@ -25,8 +25,9 @@ func _ready():
 	top = background.position.y - half_height
 	bottom = background.position.y + half_height + get_viewport_rect().size.y
 
-func _process(delta):
-	moveCamera()
+func _process(delta: float) -> void:
+	if Global.cameraMovable:
+		moveCamera()
 
 func moveCamera():
 	var cam_global_position = get_global_position()
@@ -44,9 +45,6 @@ func moveCamera():
 		var distanceToMove = (previousMousePosition - currentMousePosition) / 1.5 # Dividing by 2 to make it slower and reversing it to make it the correct direction
 	
 		previousMousePosition = currentMousePosition
-		
-		print(cam_bottom, " ", bottom)
-		print(bottom)
 		
 		if cam_right >= right + buffer:
 			position.x -= 10

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuug0p7q80lvk"]
+
+[ext_resource type="Texture2D" uid="uid://ccxvkdr0fjj60" path="res://sprites/UI/button_rectangle_depth_border.png" id="1_vodtv"]
+[ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="2_xrvf8"]
+
+[node name="RewardListItem" type="TextureRect"]
+offset_right = 384.0
+offset_bottom = 128.0
+scale = Vector2(0.455729, 0.445313)
+texture = ExtResource("1_vodtv")
+
+[node name="Chance" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.494675
+anchor_top = 0.473684
+anchor_right = 0.494675
+anchor_bottom = 0.473684
+offset_left = 26.1818
+offset_top = -37.0526
+offset_right = 154.182
+offset_bottom = 25.9474
+theme_override_font_sizes/font_size = 45
+text = "0.05%"
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemTexture" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.473528
+anchor_top = 0.491228
+anchor_right = 0.473528
+anchor_bottom = 0.491228
+offset_left = -114.909
+offset_top = -37.0526
+offset_right = -53.9091
+offset_bottom = 23.9474
+texture = ExtResource("2_xrvf8")
+metadata/_edit_use_anchors_ = true

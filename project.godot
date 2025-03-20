@@ -25,6 +25,8 @@ SceneManager="*res://scripts/singleton/SceneManager.gd"
 ItemManager="*res://scripts/singleton/ItemManager.gd"
 Global="*res://scripts/global.gd"
 GlobalUI="*res://scripts/GlobalUI.tscn"
+SoundManager="*res://scripts/SoundManager.tscn"
+PauseMenu="*res://gui/PauseMenu.tscn"
 
 [display]
 

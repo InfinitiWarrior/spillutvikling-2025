@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3mx60kqiryh4"
-path="res://.godot/imported/button_square_gradient.png-90b81bfaabf64adfa90cedc97b5a4f5f.ctex"
+uid="uid://df7u5w3hwc1qm"
+path="res://.godot/imported/rectangle.png-c49ffb3ce35daa2c10fbb5d6bdb659e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/button_square_gradient.png"
-dest_files=["res://.godot/imported/button_square_gradient.png-90b81bfaabf64adfa90cedc97b5a4f5f.ctex"]
+source_file="res://sprites/UI/rectangle.png"
+dest_files=["res://.godot/imported/rectangle.png-c49ffb3ce35daa2c10fbb5d6bdb659e0.ctex"]
 
 [params]
 

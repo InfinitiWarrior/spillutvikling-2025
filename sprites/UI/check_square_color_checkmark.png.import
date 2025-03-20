@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqfc4tgfta8mg"
-path="res://.godot/imported/button_rectangle_depth_line.png-c8314b802b8294b8eab6cd452c885280.ctex"
+uid="uid://3wrgfbamyruy"
+path="res://.godot/imported/check_square_color_checkmark.png-2c2cb7d1cc30eca7e03b613b0a02c125.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UI/Selection/button_rectangle_depth_line.png"
-dest_files=["res://.godot/imported/button_rectangle_depth_line.png-c8314b802b8294b8eab6cd452c885280.ctex"]
+source_file="res://sprites/UI/check_square_color_checkmark.png"
+dest_files=["res://.godot/imported/check_square_color_checkmark.png-2c2cb7d1cc30eca7e03b613b0a02c125.ctex"]
 
 [params]
 

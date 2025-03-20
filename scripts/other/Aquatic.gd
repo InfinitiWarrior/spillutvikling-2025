@@ -47,7 +47,12 @@ func move_to_and_back(target, onHit : Callable):
 	)
 
 func deal_damage(target):
-	target.take_damage(aquaticStats.power)
+	var power = aquaticStats.power
+	if aquaticStats.equippedWeapon:
+		power += aquaticStats.equippedWeapon.power
+
+	SoundManager.swish()
+	target.take_damage(power)
 
 func take_damage(damage):
 	print("Took ", (damage - aquaticStats.defense), " damage")
@@ -64,5 +69,6 @@ func buff_someone(target):
 func buffTarget(buff):
 	print("Healed ", buff, " health")
 	health += buff
+	health = aquaticStats.maximumHealth if health > aquaticStats.maximumHealth else health
 	print(health)
 	healthbar.value = health

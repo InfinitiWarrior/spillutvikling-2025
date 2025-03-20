@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7h2d3m1wnroh"]
+[gd_scene load_steps=6 format=3 uid="uid://b7h2d3m1wnroh"]
 
+[ext_resource type="Script" path="res://scripts/gui/StartMenu.gd" id="1_5q5ho"]
 [ext_resource type="Texture2D" uid="uid://c6ruel5rk48p7" path="res://sprites/utenknapper.png" id="1_g823l"]
 [ext_resource type="Script" path="res://scripts/gui/loadButton.gd" id="2_nh6ir"]
 [ext_resource type="Script" path="res://scripts/gui/newGameButton.gd" id="3_yuly0"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5q5ho")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

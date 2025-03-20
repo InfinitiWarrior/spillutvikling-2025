@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://dl6gc7tjch2ho"]
 
-[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="1_7n688"]
+[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/UI/backgroundEmpty.png" id="1_7n688"]
 [ext_resource type="Script" path="res://scripts/gui/WeaponSelection.gd" id="2_c7qcx"]
 [ext_resource type="Texture2D" uid="uid://bkjekkbfoyqwf" path="res://sprites/UI/Selection/arrow_basic_e.png" id="3_aw4h1"]
 [ext_resource type="Texture2D" uid="uid://c0bbty60alh2t" path="res://sprites/UI/Selection/arrow_basic_w.png" id="4_anmb6"]
 [ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="5_4sg8h"]
-[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/button_square_gradient.png" id="6_q44bl"]
+[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/UI/button_square_gradient.png" id="6_q44bl"]
 [ext_resource type="Script" path="res://scripts/gui/MenuBackButton.gd" id="7_gqinw"]
 [ext_resource type="Texture2D" uid="uid://bfayhn4g417q4" path="res://sprites/arrow_decorative_w.png" id="7_j1kkk"]
 

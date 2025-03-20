@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqn6g0q6cxjef"
-path="res://.godot/imported/backgroundEmpty.png-4d2b90b3526f40e28b1ca63794c9fb37.ctex"
+uid="uid://slbmqrlu8lbc"
+path="res://.godot/imported/Save and Quit.png-f43dde82d3037505e89eaee565647bb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/backgroundEmpty.png"
-dest_files=["res://.godot/imported/backgroundEmpty.png-4d2b90b3526f40e28b1ca63794c9fb37.ctex"]
+source_file="res://sprites/UI/PauseMenu/Save and Quit.png"
+dest_files=["res://.godot/imported/Save and Quit.png-f43dde82d3037505e89eaee565647bb4.ctex"]
 
 [params]
 

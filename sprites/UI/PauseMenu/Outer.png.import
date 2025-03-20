@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqfc4tgfta8mg"
-path="res://.godot/imported/button_rectangle_depth_line.png-c8314b802b8294b8eab6cd452c885280.ctex"
+uid="uid://bjxi2dspdafy3"
+path="res://.godot/imported/Outer.png-52fd6b01eb6dc880cda16a263a229981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UI/Selection/button_rectangle_depth_line.png"
-dest_files=["res://.godot/imported/button_rectangle_depth_line.png-c8314b802b8294b8eab6cd452c885280.ctex"]
+source_file="res://sprites/UI/PauseMenu/Outer.png"
+dest_files=["res://.godot/imported/Outer.png-52fd6b01eb6dc880cda16a263a229981.ctex"]
 
 [params]
 

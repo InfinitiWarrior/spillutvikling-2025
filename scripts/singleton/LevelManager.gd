@@ -28,6 +28,9 @@ func addLevel(scene):
 
 		tail = node
 
+func getLevelRewards():
+	return current.scene.instantiate().rewards
+
 func loadScene():
 	get_tree().change_scene_to_packed(current.scene)
 

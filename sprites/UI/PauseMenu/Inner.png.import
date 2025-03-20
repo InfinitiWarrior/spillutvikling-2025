@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df7u5w3hwc1qm"
-path="res://.godot/imported/rectangle.png-030378d50cdbf736fdac59dd6a8ba7e8.ctex"
+uid="uid://cpeh7naopmit2"
+path="res://.godot/imported/Inner.png-b80ff80c2dc0cf7c57de6246930c1453.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/rectangle.png"
-dest_files=["res://.godot/imported/rectangle.png-030378d50cdbf736fdac59dd6a8ba7e8.ctex"]
+source_file="res://sprites/UI/PauseMenu/Inner.png"
+dest_files=["res://.godot/imported/Inner.png-b80ff80c2dc0cf7c57de6246930c1453.ctex"]
 
 [params]
 

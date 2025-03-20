@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://t8dl1wpwlvmm"]
+
+[ext_resource type="Texture2D" uid="uid://bjxi2dspdafy3" path="res://sprites/UI/PauseMenu/Outer.png" id="1_8xscu"]
+[ext_resource type="Texture2D" uid="uid://cpeh7naopmit2" path="res://sprites/UI/PauseMenu/Inner.png" id="2_qwysi"]
+[ext_resource type="Texture2D" uid="uid://byn0upgi7mcu" path="res://sprites/UI/PauseMenu/InnerInner.png" id="3_6p88e"]
+[ext_resource type="Texture2D" uid="uid://slbmqrlu8lbc" path="res://sprites/UI/PauseMenu/Save and Quit.png" id="4_3vpma"]
+[ext_resource type="Texture2D" uid="uid://chqihbglpgnqw" path="res://sprites/UI/PauseMenu/Continue.png" id="5_g25ta"]
+[ext_resource type="Script" path="res://scripts/gui/PauseMenuSaveAndQuit.gd" id="5_gw40o"]
+[ext_resource type="Script" path="res://scripts/gui/PauseMenuContinue.gd" id="7_dcqy5"]
+
+[sub_resource type="Gradient" id="Gradient_m3px7"]
+colors = PackedColorArray(0.36, 0.36, 0.36, 0.713726, 0.360784, 0.360784, 0.360784, 0.713726)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fbxjn"]
+gradient = SubResource("Gradient_m3px7")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PauseMenu" type="TextureRect" parent="."]
+z_index = 1000
+offset_left = 743.0
+offset_top = 248.0
+offset_right = 1163.0
+offset_bottom = 706.0
+texture = ExtResource("1_8xscu")
+
+[node name="Label" type="Label" parent="PauseMenu"]
+offset_left = 166.0
+offset_top = 32.0
+offset_right = 245.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.995172, 0.995658, 0.99615, 1)
+theme_override_colors/font_shadow_color = Color(0.996078, 0.996078, 0.996078, 1)
+theme_override_font_sizes/font_size = 38
+text = "AXO
+"
+
+[node name="Inner" type="TextureRect" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 411.0
+offset_bottom = 430.0
+texture = ExtResource("2_qwysi")
+
+[node name="InnerInner" type="TextureRect" parent="PauseMenu/Inner"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 405.0
+offset_bottom = 332.0
+texture = ExtResource("3_6p88e")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = 100
+offset_left = -8.0
+offset_right = 1918.0
+offset_bottom = 1078.0
+texture = SubResource("GradientTexture2D_fbxjn")
+
+[node name="Save and Quit" type="TextureButton" parent="."]
+z_index = 4096
+offset_left = 798.0
+offset_top = 390.0
+offset_right = 1102.0
+offset_bottom = 518.0
+texture_normal = ExtResource("4_3vpma")
+stretch_mode = 0
+script = ExtResource("5_gw40o")
+
+[node name="Label" type="Label" parent="Save and Quit"]
+offset_left = 26.0
+offset_top = 32.0
+offset_right = 294.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.995172, 0.995658, 0.99615, 1)
+theme_override_colors/font_shadow_color = Color(0.996078, 0.996078, 0.996078, 1)
+theme_override_font_sizes/font_size = 38
+text = "Save and Quit"
+
+[node name="Continue" type="TextureButton" parent="."]
+z_index = 4096
+offset_left = 801.0
+offset_top = 534.0
+offset_right = 1232.0
+offset_bottom = 662.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("5_g25ta")
+stretch_mode = 0
+script = ExtResource("7_dcqy5")
+
+[node name="Label" type="Label" parent="Continue"]
+layout_mode = 0
+offset_left = 105.714
+offset_top = 22.8571
+offset_right = 325.714
+offset_bottom = 91.8571
+theme_override_colors/font_color = Color(0.278431, 0.301961, 0.32549, 1)
+theme_override_colors/font_shadow_color = Color(0.278431, 0.301961, 0.32549, 1)
+theme_override_font_sizes/font_size = 50
+text = "Continue"
+
+[connection signal="button_up" from="Save and Quit" to="Save and Quit" method="_on_button_up"]
+[connection signal="button_up" from="Continue" to="Continue" method="_on_button_up"]

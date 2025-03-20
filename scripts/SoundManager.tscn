@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://fj2hmttg3wo1"]
+
+[ext_resource type="Script" path="res://scripts/other/SoundManager.gd" id="1_housu"]
+[ext_resource type="AudioStream" uid="uid://csik884txcet8" path="res://sounds/click-b.ogg" id="1_v0iuw"]
+[ext_resource type="AudioStream" uid="uid://dpai7kxd0yemn" path="res://sounds/bgm.mp3" id="3_3cist"]
+[ext_resource type="AudioStream" uid="uid://ns6qew0l6ydu" path="res://sounds/swish.mp3" id="4_um5s2"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_housu")
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_v0iuw")
+volume_db = 8.157
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3cist")
+autoplay = true
+max_distance = 200000.0
+parameters/looping = true
+
+[node name="swish" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_um5s2")
+volume_db = 11.216

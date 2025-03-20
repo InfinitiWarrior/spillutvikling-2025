@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scripts/gui/RewardScreen.gd" id="1_ycfoe"]
 [ext_resource type="Script" path="res://scripts/gui/RewardContinueButton.gd" id="3_d8w2l"]
 [ext_resource type="Texture2D" uid="uid://nescgj54jcp" path="res://sprites/UI/button_rectangle_line.png" id="3_sshqc"]
-[ext_resource type="Texture2D" uid="uid://ccxvkdr0fjj60" path="res://sprites/button_rectangle_depth_border.png" id="4_d8igb"]
+[ext_resource type="Texture2D" uid="uid://ccxvkdr0fjj60" path="res://sprites/UI/button_rectangle_depth_border.png" id="4_d8igb"]
 [ext_resource type="Texture2D" uid="uid://dlgv30i0eftcc" path="res://sprites/star.png" id="5_6687c"]
-[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="6_7h6jo"]
+[ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/UI/backgroundEmpty.png" id="6_7h6jo"]
 [ext_resource type="Texture2D" uid="uid://p1l58sibjpwe" path="res://sprites/UI/icon_checkmark.png" id="7_pfxmm"]
 
 [node name="RewardScreen" type="Control"]

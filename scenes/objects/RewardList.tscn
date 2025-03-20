@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqhy5p1l68pe0"]
+
+[ext_resource type="Texture2D" uid="uid://3wrgfbamyruy" path="res://sprites/UI/check_square_color_checkmark.png" id="2_j6o6v"]
+[ext_resource type="Texture2D" uid="uid://bs0s7y2djkarh" path="res://sprites/UI/check_square_color_cross.png" id="3_43wri"]
+[ext_resource type="Script" path="res://scripts/gui/RewardListStart.gd" id="3_wiqxj"]
+[ext_resource type="Texture2D" uid="uid://bqfc4tgfta8mg" path="res://sprites/UI/Selection/button_rectangle_depth_line.png" id="4_yccwo"]
+[ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/UI/button_square_gradient.png" id="5_dm1o2"]
+[ext_resource type="Script" path="res://scripts/gui/RewardListClose.gd" id="5_n3ajf"]
+
+[node name="RewardListControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 740.0
+offset_bottom = 567.0
+
+[node name="RewardList" type="ScrollContainer" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -347.0
+offset_bottom = -173.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RewardVBoxContainer" type="VBoxContainer" parent="RewardList"]
+z_index = 5
+layout_mode = 2
+
+[node name="ButtonContainer" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 395.0
+offset_right = 131.0
+offset_bottom = 523.0
+texture = ExtResource("4_yccwo")
+
+[node name="Start" type="TextureButton" parent="ButtonContainer"]
+z_index = 2
+layout_mode = 0
+offset_left = 56.0
+offset_top = 18.0
+offset_right = 120.0
+offset_bottom = 82.0
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("2_j6o6v")
+script = ExtResource("3_wiqxj")
+
+[node name="Close" type="TextureButton" parent="ButtonContainer"]
+z_index = 2
+layout_mode = 0
+offset_left = 245.0
+offset_top = 18.0
+offset_right = 309.0
+offset_bottom = 82.0
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("3_43wri")
+script = ExtResource("5_n3ajf")
+
+[node name="ItemListBackground" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.99998
+offset_right = 129.0
+offset_bottom = 132.0
+scale = Vector2(2.98438, 3.00781)
+texture = ExtResource("5_dm1o2")
+
+[connection signal="button_up" from="ButtonContainer/Start" to="ButtonContainer/Start" method="_on_button_up"]
+[connection signal="button_up" from="ButtonContainer/Close" to="ButtonContainer/Close" method="_on_button_up"]
