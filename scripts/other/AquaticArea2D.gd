@@ -58,6 +58,7 @@ func _input(event):
 			aquaticSelected = false
 			aquatic = null
 		else:
+			line.default_color = Color.YELLOW
 			aquaticSelected = true
 			
 			enemy = null

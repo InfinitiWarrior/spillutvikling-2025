@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcw2ibpbpqpof"]
+
+[ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_5256j"]
+[ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="3_c0epj"]
+[ext_resource type="PackedScene" uid="uid://c6hccte4vjfxl" path="res://scenes/enemies/Wizard.tscn" id="4_8dsdn"]
+[ext_resource type="PackedScene" uid="uid://dh0saof52ubjb" path="res://scenes/enemies/miniboss.tscn" id="4_vi20p"]
+
+[sub_resource type="Resource" id="Resource_4gji4"]
+script = ExtResource("3_c0epj")
+pearls = 10
+corals = 10
+experience = 250
+levelUnlocked = 6
+
+[sub_resource type="Gradient" id="Gradient_g7g8o"]
+colors = PackedColorArray(0.372749, 0.80156, 0.918178, 0.760784, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j7peu"]
+gradient = SubResource("Gradient_g7g8o")
+
+[node name="Level5" type="Node"]
+script = ExtResource("1_5256j")
+rewards = SubResource("Resource_4gji4")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_j7peu")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="miniboss" parent="." instance=ExtResource("4_vi20p")]
+position = Vector2(1480, 378)
+
+[node name="Wizard" parent="." instance=ExtResource("4_8dsdn")]
+position = Vector2(1488, 586)
