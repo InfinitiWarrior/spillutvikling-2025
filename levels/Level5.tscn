@@ -33,8 +33,8 @@ texture = SubResource("GradientTexture1D_j7peu")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="miniboss" parent="." instance=ExtResource("4_vi20p")]
+[node name="miniboss" parent="Enemies" instance=ExtResource("4_vi20p")]
 position = Vector2(1480, 378)
 
-[node name="Wizard" parent="." instance=ExtResource("4_8dsdn")]
+[node name="Wizard" parent="Enemies" instance=ExtResource("4_8dsdn")]
 position = Vector2(1488, 586)

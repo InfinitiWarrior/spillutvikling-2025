@@ -59,7 +59,7 @@ func take_damage(damage):
 		queue_free()
 
 func buff_someone(target):
-	target.buffTarget(10)
+	target.buffTarget(20 + (GlobalUI.getLevelValue() * 10))
 
 func buffTarget(buff):
 	print("Healed ", buff, " health")

@@ -7,6 +7,6 @@ script = ExtResource("1_m2rlj")
 id = 2
 name = "Wizard"
 maximumHealth = 50
-power = 30
+power = 19
 defense = 3
 abilityName = "Fire"
