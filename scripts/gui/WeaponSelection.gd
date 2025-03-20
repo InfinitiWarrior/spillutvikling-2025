@@ -15,7 +15,6 @@ var equippedItem = null
 func _ready():
 	ItemManager.unlock(ItemManager.byId(1))
 	ItemManager.unlock(ItemManager.byId(2))
-	ItemManager.unlock(ItemManager.byId(3))
 	displayAquaticTexture(index)
 	process()
 

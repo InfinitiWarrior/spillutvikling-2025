@@ -30,6 +30,13 @@ func _ready():
 		addRewardGUI("Exp x " + str(rewards.experience), load("res://sprites/GlobalUI/experience.png"))
 		stats.experience += rewards.experience
 	
+	if rewards.weapon:
+		if randi() % 100 < rewards.weaponChance:
+			ItemManager.unlock(ItemManager.byId(rewards.weapon.id))
+			print(ItemManager.byId(rewards.weapon.id).unlocked)
+			
+			addRewardGUI("WEAPON x ", rewards.weapon.texture)
+	
 	SaveManager.save()
 
 func isAlreadyCleared():

@@ -6,3 +6,5 @@ class_name Reward
 @export var experience : int
 @export var levelUnlocked : int
 @export var aquaticUnlocked : AquaticStats
+@export var weapon : Weapon
+@export var weaponChance : int

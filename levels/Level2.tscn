@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://be2ncioso1cjd"]
 
 [ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_lyvlc"]
-[ext_resource type="PackedScene" uid="uid://c6hccte4vjfxl" path="res://scenes/enemies/Wizard.tscn" id="2_dtkae"]
 [ext_resource type="Resource" uid="uid://csr78bybx65uk" path="res://resources/stats/aquatic/ScubaDude.tres" id="2_uyqc6"]
 [ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="3_viqeu"]
+[ext_resource type="PackedScene" uid="uid://du2qvm6mjgshq" path="res://scenes/enemies/Tank.tscn" id="4_caqod"]
 
 [sub_resource type="Resource" id="Resource_0oq1o"]
 script = ExtResource("3_viqeu")
@@ -34,6 +34,5 @@ texture = SubResource("GradientTexture1D_j7peu")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Wizard" parent="Enemies" instance=ExtResource("2_dtkae")]
-position = Vector2(1450, 497)
-scale = Vector2(2, 2)
+[node name="Tank" parent="Enemies" instance=ExtResource("4_caqod")]
+position = Vector2(1630, 572)

@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cf38g64rnto1y"]
+[gd_scene load_steps=7 format=3 uid="uid://b5yr3egset564"]
 
 [ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_k6twp"]
+[ext_resource type="PackedScene" uid="uid://cpvdedhqtq53y" path="res://scenes/enemies/glass-cannon.tscn" id="3_1rhxy"]
 [ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="3_pnug5"]
-[ext_resource type="PackedScene" uid="uid://cnbabgj1pupmh" path="res://scenes/enemies/Tank.tscn" id="3_t3q6e"]
 
 [sub_resource type="Resource" id="Resource_qo6vd"]
 script = ExtResource("3_pnug5")
@@ -32,8 +32,8 @@ texture = SubResource("GradientTexture1D_j7peu")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="glass-cannon" parent="Enemies" instance=ExtResource("3_t3q6e")]
-position = Vector2(1427, 386)
+[node name="glass-cannon" parent="Enemies" instance=ExtResource("3_1rhxy")]
+position = Vector2(1426, 382)
 
-[node name="glass-cannon2" parent="Enemies" instance=ExtResource("3_t3q6e")]
-position = Vector2(1424, 637)
+[node name="glass-cannon2" parent="Enemies" instance=ExtResource("3_1rhxy")]
+position = Vector2(1426, 641)

@@ -53,6 +53,7 @@ func initialize():
 	placeAquatics()
 
 func placeAquatics():
+	EntityManager.renderQueue.clear()
 	for aquatic in EntityManager.getUnlockedAquaticArray():
 		EntityManager.render(aquatic.name)
 	

@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_63vbu")
 
-[node name="RewardTexture" type="TextureRect" parent="."]
+[node name="RewardTexture" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = 290.0
 offset_top = 19.5

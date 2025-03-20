@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AquaticStats" load_steps=3 format=3 uid="uid://csr78bybx65uk"]
 
 [ext_resource type="Script" path="res://scripts/customResources/AquaticStats.gd" id="1_i1sp3"]
-[ext_resource type="Texture2D" uid="uid://do6jrf655gnj5" path="res://sprites/GlobalUI/pearl.png" id="2_bjbmg"]
+[ext_resource type="Texture2D" uid="uid://cosgcb3lbi5fd" path="res://sprites/AquaticTextures/ScubaDude.png" id="2_x8h6o"]
 
 [resource]
 script = ExtResource("1_i1sp3")
@@ -11,4 +11,4 @@ maximumHealth = 100
 power = 15
 defense = 5
 abilityName = "Nonee"
-texture = ExtResource("2_bjbmg")
+texture = ExtResource("2_x8h6o")

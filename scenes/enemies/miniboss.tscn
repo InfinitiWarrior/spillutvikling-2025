@@ -1,83 +1,55 @@
-[gd_scene load_steps=18 format=3 uid="uid://dh0saof52ubjb"]
+[gd_scene load_steps=14 format=3 uid="uid://dxvusc2aqprq"]
 
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_wvhqr"]
-[ext_resource type="Resource" uid="uid://da0i3fftlf5t6" path="res://resources/stats/enemy/miniboss.tres" id="2_tj6mm"]
-[ext_resource type="Texture2D" uid="uid://dgup7dh56ot32" path="res://sprites/wizard/wizard idle.png" id="3_xcdvo"]
+[ext_resource type="Resource" path="res://resources/stats/enemy/miniboss.tres" id="2_tj6mm"]
+[ext_resource type="Texture2D" uid="uid://dmxjh4t7ec12i" path="res://sprites/ClownfishIdleSeq.png" id="3_m4p68"]
 [ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_cnwes"]
 [ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_w2rvd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h36af"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(0, 240, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0k2r"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 0, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4h8w8"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(0, 160, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhx44"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 1200, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lk6jr"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(78, 160, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5h67"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 2400, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3147v"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(156, 160, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdgja"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 3600, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c0jts"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(156, 80, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mct7n"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 4800, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_33bb6"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(78, 80, 78, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bw74h"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(0, 80, 78, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nwwck"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(0, 0, 78, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ii5v"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(78, 0, 78, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fxya3"]
-atlas = ExtResource("3_xcdvo")
-region = Rect2(156, 0, 78, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pksl2"]
+atlas = ExtResource("3_m4p68")
+region = Rect2(0, 6000, 1200, 1200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_idoj6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h36af")
+"texture": SubResource("AtlasTexture_r0k2r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4h8w8")
+"texture": SubResource("AtlasTexture_lhx44")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lk6jr")
+"texture": SubResource("AtlasTexture_w5h67")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3147v")
+"texture": SubResource("AtlasTexture_jdgja")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c0jts")
+"texture": SubResource("AtlasTexture_mct7n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_33bb6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bw74h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nwwck")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8ii5v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fxya3")
+"texture": SubResource("AtlasTexture_pksl2")
 }],
 "loop": true,
 "name": &"idle",
@@ -85,21 +57,23 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnvtc"]
-radius = 25.0
-height = 82.0
+radius = 55.0
+height = 110.0
 
 [node name="miniboss" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
+scale = Vector2(3, 3)
 script = ExtResource("1_wvhqr")
 enemyStats = ExtResource("2_tj6mm")
 healthbar = NodePath("Healthbar")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1.90735e-06, 2.86102e-06)
-scale = Vector2(1.40705, 1.40705)
+position = Vector2(-1.66666, 7.62939e-06)
+scale = Vector2(0.127617, 0.127617)
 sprite_frames = SubResource("SpriteFrames_idoj6")
 animation = &"idle"
 frame_progress = 0.324581
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("4_cnwes")

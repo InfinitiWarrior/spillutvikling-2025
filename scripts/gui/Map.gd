@@ -33,14 +33,16 @@ func _on_level_pressed(node):
 	var rewards = LevelManager.byIndex(node.level).getLevelRewards()
 	
 	if rewards:
+		if rewards.aquaticUnlocked:
+			itemContainer.add_child(getRewardListItem("100%", rewards.aquaticUnlocked.texture))
+		if rewards.weapon:
+			itemContainer.add_child(getRewardListItem(str(rewards.weaponChance) + "%", rewards.weapon.texture))
 		if rewards.pearls:
 			itemContainer.add_child(getRewardListItem(rewards.pearls, load("res://sprites/GlobalUI/pearl.png")))
 		if rewards.corals:
 			itemContainer.add_child(getRewardListItem(rewards.corals, load("res://sprites/GlobalUI/coral.png")))
 		if rewards.experience:
 			itemContainer.add_child(getRewardListItem(rewards.experience, load("res://sprites/GlobalUI/experience.png")))
-		if rewards.aquaticUnlocked:
-			itemContainer.add_child(getRewardListItem(100, rewards.aquaticUnlocked.texture))
 	
 		rewardListControl.global_position = Vector2(node.global_position.x - 180, node.global_position.y - 250)
 		add_child(rewardListControl)

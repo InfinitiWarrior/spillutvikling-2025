@@ -20,6 +20,8 @@ func idle_animate():
 	animatedSprite.play("idle")
 
 func attack(target):
+	if not target:
+		return
 	print("Attack: ", target)
 	move_to_and_back(target, func(): deal_damage(target))
 

@@ -8,25 +8,11 @@
 [ext_resource type="Script" path="res://scripts/gui/RewardListClose.gd" id="5_n3ajf"]
 
 [node name="RewardListControl" type="Control"]
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 offset_right = 740.0
 offset_bottom = 567.0
-
-[node name="RewardList" type="ScrollContainer" parent="."]
-z_index = 5
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -347.0
-offset_bottom = -173.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RewardVBoxContainer" type="VBoxContainer" parent="RewardList"]
-z_index = 5
-layout_mode = 2
 
 [node name="ButtonContainer" type="TextureRect" parent="."]
 layout_mode = 0
@@ -61,12 +47,27 @@ script = ExtResource("5_n3ajf")
 [node name="ItemListBackground" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 0
-offset_left = 1.0
-offset_top = 3.99998
-offset_right = 129.0
-offset_bottom = 132.0
+offset_left = -20.0
+offset_top = -24.0
+offset_right = 122.0
+offset_bottom = 119.0
 scale = Vector2(2.98438, 3.00781)
 texture = ExtResource("5_dm1o2")
+
+[node name="RewardList" type="ScrollContainer" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -347.0
+offset_bottom = -173.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RewardVBoxContainer" type="VBoxContainer" parent="RewardList"]
+z_index = 5
+layout_mode = 2
 
 [connection signal="button_up" from="ButtonContainer/Start" to="ButtonContainer/Start" method="_on_button_up"]
 [connection signal="button_up" from="ButtonContainer/Close" to="ButtonContainer/Close" method="_on_button_up"]
