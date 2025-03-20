@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4hvqq4b3uphb"]
+[gd_scene load_steps=7 format=3 uid="uid://b4hvqq4b3uphb"]
 
 [ext_resource type="Script" path="res://scripts/other/Level.gd" id="1_opb1f"]
 [ext_resource type="Script" path="res://scripts/customResources/Reward.gd" id="2_e7acp"]
 [ext_resource type="PackedScene" uid="uid://c6hccte4vjfxl" path="res://scenes/enemies/Wizard.tscn" id="3_khcfi"]
 [ext_resource type="Texture2D" uid="uid://bqn6g0q6cxjef" path="res://sprites/backgroundEmpty.png" id="3_rewl3"]
+[ext_resource type="Texture2D" uid="uid://ccxvkdr0fjj60" path="res://sprites/button_rectangle_depth_border.png" id="5_7o81b"]
 
 [sub_resource type="Resource" id="Resource_we8cb"]
 script = ExtResource("2_e7acp")
@@ -34,3 +35,28 @@ scale = Vector2(2, 2)
 [node name="Wizard2" parent="Enemies" instance=ExtResource("3_khcfi")]
 position = Vector2(1413, 557)
 scale = Vector2(2, 2)
+
+[node name="ButtonRectangleDepthBorder" type="Sprite2D" parent="."]
+position = Vector2(188, 62)
+texture = ExtResource("5_7o81b")
+
+[node name="ButtonRectangleDepthBorder2" type="Sprite2D" parent="."]
+position = Vector2(614, 64)
+texture = ExtResource("5_7o81b")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 363.0
+offset_bottom = 101.0
+text = "hold and release onto the enemies on
+the right to attack"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 17.0
+offset_right = 790.0
+offset_bottom = 104.0
+text = "click the player character or release on
+nothing to initiate a heal.
+this uses a turn"
