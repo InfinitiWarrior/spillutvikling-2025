@@ -9,6 +9,9 @@ var levelMap : Dictionary = {}
 func _ready():
 	addLevel(preload("res://levels/Level1.tscn"))
 	addLevel(preload("res://levels/Level2.tscn"))
+	addLevel(preload("res://levels/Level3.tscn"))
+	addLevel(preload("res://levels/Level4.tscn"))
+	addLevel(preload("res://levels/Level5.tscn"))
 
 func addLevel(scene):
 	var index = (tail.index + 1) if tail else 1

@@ -32,11 +32,11 @@ texture = SubResource("GradientTexture1D_j7peu")
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="glass-cannon" parent="." instance=ExtResource("4_xgpxu")]
-position = Vector2(1463, 309)
+[node name="glass-cannon" parent="Enemies" instance=ExtResource("4_xgpxu")]
+position = Vector2(1478, 309)
 
-[node name="glass-cannon2" parent="." instance=ExtResource("4_xgpxu")]
+[node name="glass-cannon2" parent="Enemies" instance=ExtResource("4_xgpxu")]
 position = Vector2(1474, 494)
 
-[node name="glass-cannon3" parent="." instance=ExtResource("4_xgpxu")]
+[node name="glass-cannon3" parent="Enemies" instance=ExtResource("4_xgpxu")]
 position = Vector2(1478, 710)
