@@ -39,8 +39,9 @@ func _input(event):
 
 		if not enemy:
 			enemySelected = false
-			line.default_color = Color.GREEN
 			enemy = null
+			if not enemy or not aquatic:
+				line.default_color = Color.GREEN
 			
 		else:
 			enemy.drawCircle()
