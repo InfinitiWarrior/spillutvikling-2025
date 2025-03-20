@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://p7eq53u6ie00"]
+[gd_scene load_steps=9 format=3 uid="uid://p7eq53u6ie00"]
 
 [ext_resource type="Script" path="res://scripts/gui/Map.gd" id="1_dft7m"]
+[ext_resource type="Script" path="res://scripts/other/MapCamera.gd" id="2_2repr"]
 [ext_resource type="PackedScene" uid="uid://cx8gowrvkq0yc" path="res://scenes/objects/LevelNodeButton.tscn" id="2_58a1p"]
-[ext_resource type="Texture2D" uid="uid://bq6f6qcu2sf88" path="res://sprites/Axolotl.png" id="3_qcbeh"]
 [ext_resource type="Script" path="res://scripts/gui/WeaponSelectButton.gd" id="4_0lt8s"]
 [ext_resource type="Texture2D" uid="uid://3mx60kqiryh4" path="res://sprites/button_square_gradient.png" id="4_ridqm"]
 [ext_resource type="Texture2D" uid="uid://bh52ec7ay453x" path="res://sprites/swordBronze.png" id="6_4y5t2"]
+
+[sub_resource type="Gradient" id="Gradient_8mjph"]
+colors = PackedColorArray(0.129491, 0.365384, 1, 1, 0.67451, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlp6r"]
+gradient = SubResource("Gradient_8mjph")
 
 [node name="Map" type="Control"]
 layout_mode = 3
@@ -16,17 +22,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dft7m")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 0
-offset_left = 242.0
-offset_top = -12.0
-offset_right = 942.0
-offset_bottom = 688.0
-texture = ExtResource("3_qcbeh")
+offset_left = -917.0
+offset_top = -1594.0
+offset_right = 3743.0
+offset_bottom = 1470.0
+texture = SubResource("GradientTexture2D_dlp6r")
 
 [node name="MapCamera" type="Camera2D" parent="."]
 position = Vector2(578, 325)
+script = ExtResource("2_2repr")
 
 [node name="Nodes" type="Control" parent="."]
 anchors_preset = 0
@@ -76,5 +83,10 @@ offset_bottom = 58.0
 rotation = 0.785398
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_4y5t2")
+
+[node name="NodeLine" type="Line2D" parent="."]
+z_index = -1
+points = PackedVector2Array(160, 320, 542, 306, 851, 263)
+default_color = Color(1, 1, 0.627451, 1)
 
 [connection signal="button_up" from="CanvasLayer/WeaponSelectButton" to="CanvasLayer/WeaponSelectButton" method="_on_button_up"]
