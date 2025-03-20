@@ -17,5 +17,4 @@ func RewardScreen():
 
 func WeaponSelect():
 	GlobalUI.visible = true
-	SaveManager.loadSave()
 	loadScene("res://gui/WeaponSelection.tscn")
