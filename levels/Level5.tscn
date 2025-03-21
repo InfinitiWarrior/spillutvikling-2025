@@ -11,6 +11,7 @@ pearls = 10
 corals = 10
 experience = 250
 levelUnlocked = 6
+weaponChance = 0
 
 [sub_resource type="Gradient" id="Gradient_g7g8o"]
 colors = PackedColorArray(0.372749, 0.80156, 0.918178, 0.760784, 1, 1, 1, 1)

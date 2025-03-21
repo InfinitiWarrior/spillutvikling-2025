@@ -12,6 +12,7 @@ pearls = 3
 corals = 3
 experience = 80
 levelUnlocked = 2
+weaponChance = 0
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_opb1f")

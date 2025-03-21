@@ -7,7 +7,7 @@
 script = ExtResource("1_kibt2")
 id = 2
 name = "Silver Sword"
-power = 20
+power = 12
 aquaticOwner = 1
 unlocked = false
 texture = ExtResource("3_pas2f")

@@ -2,68 +2,68 @@
 
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_tapdl"]
 [ext_resource type="Resource" uid="uid://cnedtig13qx1k" path="res://resources/stats/enemy/Tank.tres" id="2_we030"]
-[ext_resource type="Texture2D" uid="uid://ddnlnbunpqyft" path="res://sprites/sprite-removebg-preview.png" id="3_4aqae"]
+[ext_resource type="Texture2D" uid="uid://dv1b16iye820h" path="res://sprites/IdleSkeletonCapitanSeq.png" id="3_ejmgl"]
 [ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_x4w21"]
 [ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_pvvdl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_871hn"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 700, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb5dx"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 0, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bt05e"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 600, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_57w5p"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 1200, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8cj52"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 500, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga2sb"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 2400, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oi8ao"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 400, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss6dx"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 3600, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uiuyl"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 300, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jotye"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 4800, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j4l5l"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 200, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar6g4"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 6000, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dg5ax"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 100, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm58o"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 7200, 1200, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gbyoh"]
-atlas = ExtResource("3_4aqae")
-region = Rect2(0, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3r05"]
+atlas = ExtResource("3_ejmgl")
+region = Rect2(0, 8400, 1200, 1200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_idoj6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_871hn")
+"texture": SubResource("AtlasTexture_kb5dx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bt05e")
+"texture": SubResource("AtlasTexture_57w5p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8cj52")
+"texture": SubResource("AtlasTexture_ga2sb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oi8ao")
+"texture": SubResource("AtlasTexture_ss6dx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uiuyl")
+"texture": SubResource("AtlasTexture_jotye")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j4l5l")
+"texture": SubResource("AtlasTexture_ar6g4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dg5ax")
+"texture": SubResource("AtlasTexture_cm58o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gbyoh")
+"texture": SubResource("AtlasTexture_g3r05")
 }],
 "loop": true,
 "name": &"idle",
@@ -71,7 +71,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnvtc"]
-radius = 63.0
+radius = 75.0
 height = 252.0
 
 [node name="Tank" type="CharacterBody2D" node_paths=PackedStringArray("healthbar")]
@@ -82,8 +82,8 @@ healthbar = NodePath("Healthbar")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-66, -15)
-scale = Vector2(3.31352, 3.31352)
+position = Vector2(-22, -32.6667)
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_idoj6")
 animation = &"idle"
 frame_progress = 0.324581
@@ -101,4 +101,6 @@ offset_left = -32.0
 offset_top = 41.0
 offset_right = 32.0
 offset_bottom = 51.0
+texture_under = null
+texture_progress = null
 metadata/_edit_use_anchors_ = true
