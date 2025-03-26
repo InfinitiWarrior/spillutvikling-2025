@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cpvdedhqtq53y"]
 
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_hxjrd"]
-[ext_resource type="Resource" path="res://resources/stats/enemy/GlassCanon.tres" id="2_b5iow"]
+[ext_resource type="Resource" uid="uid://c6auqktpx4jxw" path="res://resources/stats/enemy/GlassCanon.tres" id="2_b5iow"]
 [ext_resource type="Texture2D" uid="uid://dgcjrlmcy0wec" path="res://sprites/IdlePiranhaSeq.png" id="3_jgq0l"]
 [ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_ewn8w"]
 [ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_vi88t"]
@@ -97,6 +97,6 @@ shape = SubResource("CapsuleShape2D_lnvtc")
 
 [node name="Healthbar" parent="." instance=ExtResource("5_vi88t")]
 offset_left = -32.0
-offset_top = 41.0
+offset_top = 25.5
 offset_right = 32.0
-offset_bottom = 51.0
+offset_bottom = 35.5

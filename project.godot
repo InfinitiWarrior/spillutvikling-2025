@@ -38,6 +38,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Mildly Infuriating Aquatic Creatures Return of the Axolotl"
 
+[editor]
+
+movie_writer/movie_file="/home/aqua/Desktop/spill.avi"
+
 [file_customization]
 
 folder_colors={

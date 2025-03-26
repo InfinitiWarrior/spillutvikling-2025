@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dxvusc2aqprq"]
 
 [ext_resource type="Script" path="res://scripts/other/Enemy.gd" id="1_wvhqr"]
-[ext_resource type="Resource" path="res://resources/stats/enemy/miniboss.tres" id="2_tj6mm"]
+[ext_resource type="Resource" uid="uid://b0pyabqh70xty" path="res://resources/stats/enemy/miniboss.tres" id="2_tj6mm"]
 [ext_resource type="Texture2D" uid="uid://dmxjh4t7ec12i" path="res://sprites/ClownfishIdleSeq.png" id="3_m4p68"]
 [ext_resource type="Script" path="res://scripts/other/EnemyArea2D.gd" id="4_cnwes"]
 [ext_resource type="PackedScene" uid="uid://rjeddw6ja0oo" path="res://scenes/objects/Healthbar.tscn" id="5_w2rvd"]
@@ -82,7 +82,7 @@ script = ExtResource("4_cnwes")
 shape = SubResource("CapsuleShape2D_lnvtc")
 
 [node name="Healthbar" parent="." instance=ExtResource("5_w2rvd")]
-offset_left = -32.0
-offset_top = 41.0
-offset_right = 32.0
-offset_bottom = 51.0
+offset_left = -33.0
+offset_top = 46.3333
+offset_right = 31.0
+offset_bottom = 56.3333
